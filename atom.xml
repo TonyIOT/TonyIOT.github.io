@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tony的博客</title>
   
-  <subtitle>你有你的万家灯火 我有我的漫漫天涯</subtitle>
+  <subtitle>TonyCode</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="//tonycode.top/"/>
