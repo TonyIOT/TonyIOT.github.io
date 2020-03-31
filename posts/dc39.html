@@ -19,15 +19,15 @@
     <title>Arduino基础入门篇19—点阵屏 | Tonyの博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/jquery/jquery.min.js"></script>
     
 <style type="text/css" lang="css">
     #loading-container{
@@ -510,7 +510,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -658,14 +658,14 @@
                 <p>将8个LED发光二极管封装在一起就组成了数码管，将更多的LED组合在一起就组成了点阵屏。本篇我们来认识点阵屏，通过Arduino的IO口直接驱动点阵屏来了解其驱动方式。</p>
 <h2 id="1-点阵屏介绍"><a href="#1-点阵屏介绍" class="headerlink" title="1. 点阵屏介绍"></a>1. 点阵屏介绍</h2><p>LED点阵屏由LED发光二极管组成，通过控制LED亮灭来显示文字、图片、动画、视频等，被广泛应用于公共场合做信息展示，如广告屏、公告牌等。</p>
 <p>LED点阵屏按照LED发光颜色可分为单色、双色、三色灯等，可显示红、黄、绿甚至是真彩色。根据LED的数量又分为4x4、8x8、16x16等不同类型。多色点阵屏工艺要求相对较高，需要考虑多种颜色混合时对色彩的影响。这里我们通过单色8x8点阵屏来了解其原理。</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160815_62.jpg" alt="8x8点阵屏"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160815_62.jpg" alt="8x8点阵屏"></p>
 <p>不同点阵屏封装不同，8x8点阵屏由8行8列共64个LED灯组成，其内部结构如下图：</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160815_448.jpg" alt="8x8内部结构"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160815_448.jpg" alt="8x8内部结构"></p>
 <p>每个LED放置在行线和列线的交叉点上，当对应的某一行电平拉高，某一列电拉低，则对应交叉点的LED就会点亮。</p>
 <p>8x8点阵屏有16个管脚，将有丝印的一边朝下，逆时针编号为1<del>8，9</del>16。</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160815_239.jpg" alt="8X8点阵管脚"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160815_239.jpg" alt="8X8点阵管脚"></p>
 <p>其对应内部管脚定义如下如所示：</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160816_522.jpg" alt="点阵屏管脚定义"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160816_522.jpg" alt="点阵屏管脚定义"></p>
 <p>比如我们要点亮第一行第一列LED灯，则对应将点阵屏的第9脚拉高，第13脚拉低，其他LED控制以此类推即可。</p>
 <h2 id="2-实验材料"><a href="#2-实验材料" class="headerlink" title="2. 实验材料"></a>2. 实验材料</h2><ul>
 <li>Uno R3开发板</li>
@@ -677,9 +677,9 @@
 <p>点阵屏的[13, 3, 4, 10, 6, 11, 15, 16]分别连接开发板的[10,16, 17, 7, 3, 8, 12, 13]，这8个引脚为LED的负极。</p>
 <p>这里需要注意，Uno R3开发板的A0<del>A5也可以做普通GPIO使用，编号分别为14</del>19。</p>
 <p>实验原理图如下图所示：</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160816_378.jpg" alt="实验原理图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160816_378.jpg" alt="实验原理图"></p>
 <p>实物连接图如下图所示：</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160816_850.jpg" alt="实验原理图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160816_850.jpg" alt="实验原理图"></p>
 <h3 id="2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"><a href="#2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。" class="headerlink" title="2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"></a>2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。</h3><pre class=" language-c++"><code class="language-c++">/*
  * Matrix
  * 点阵屏显示驱动
@@ -757,9 +757,9 @@ void loop() {
   ledRow(); //行扫描
 
 }</code></pre>
-<h3 id="3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。"><a href="#3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。" class="headerlink" title="3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。"></a>3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。</h3><p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160816_108.jpg" alt="程序下载"></p>
+<h3 id="3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。"><a href="#3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。" class="headerlink" title="3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。"></a>3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160816_108.jpg" alt="程序下载"></p>
 <h2 id="4-实验现象"><a href="#4-实验现象" class="headerlink" title="4. 实验现象"></a>4. 实验现象</h2><p>LED点阵屏点亮然后熄灭，然后逐列点亮，逐行点亮。</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160817_699.gif" alt="实验现象"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160817_699.gif" alt="实验现象"></p>
 <h2 id="5-实验分析"><a href="#5-实验分析" class="headerlink" title="5. 实验分析"></a>5. 实验分析</h2><p>LED点阵屏不过是多个LED组合在一起来驱动，基本的驱动方式是逐行扫描或者逐列扫描。通过两个for循环嵌套来进行操作，外部循环控制列，内部循环遍历行，或者外部循环控制行，内部循环遍历列，相对操作还是非常简单的。当逐行或者逐列扫描足够快的时候，人眼就会因为视觉暂存而看到同时点亮的效果。</p>
 <p>当对多块点阵屏进行操作时，使用IO引脚直接驱动的方式就显得不切实际了，一方面这需要占用很多的IO口，另一方面IO驱动能力毕竟有限，所以点阵屏还有专门的驱动电路和IC芯片来满足更高的应用要求。</p>
 <script>
@@ -1178,7 +1178,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="/libs/tocbot/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1368,11 +1368,11 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
@@ -1394,12 +1394,10 @@ $(function () {
 </script>
 
     
-    <script src="/libs/others/clicklove.js" async="async"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-
+    <script async src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1409,9 +1407,11 @@ $(function () {
     
 
     
+
     
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>

@@ -19,15 +19,15 @@
     <title>Arduino基础入门篇14—跳动的数码管 | Tonyの博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/jquery/jquery.min.js"></script>
     
 <style type="text/css" lang="css">
     #loading-container{
@@ -510,7 +510,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -658,7 +658,7 @@
                 <p>本篇介绍数码管显示器件，通过控制一位共阴极数码管动态显示数字0到9来了解数码管的使用。</p>
 <h2 id="1-数码管介绍"><a href="#1-数码管介绍" class="headerlink" title="1. 数码管介绍"></a>1. 数码管介绍</h2><p>数码管，又称LED数码管，是常见的用来显示数字的电子器件。通常由八段发光二极管封装在一起组成“8”字形状，外加一个小数点。数码管每一段都是一个独立的LED，通过控制相应段LED的亮灭使其组成相应数字形状来显示数字。</p>
 <p>数码管的8个LED并联在一起，根据公共管脚的不同，分为共阳极数码管和共阴极数码管两种。其区别就是公共管脚是LED灯的正极还是负极。</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160807_102.jpg" alt="数码管内部结构"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160807_102.jpg" alt="数码管内部结构"></p>
 <p>如上图，数码管8个段分别命名为A,B,C,D,E,F,G,DP，其封装共10个引脚，其中上下方正中间的是公共极，其他引脚分别对应8个LED的另一端。</p>
 <h2 id="2-实验材料"><a href="#2-实验材料" class="headerlink" title="2. 实验材料"></a>2. 实验材料</h2><ul>
 <li>Uno R3开发板</li>
@@ -667,13 +667,13 @@
 <li>共阴极数码管</li>
 <li>1个220Ω限流电阻</li>
 </ul>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160807_545.jpg" alt="数码管显示"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160807_545.jpg" alt="数码管显示"></p>
 <p>那么如何让数码管来显示数字呢？比如显示数字0，我们只需要点亮A,B,C,D,E,F段LED，熄灭G,DP段LED即可。</p>
 <h2 id="3-实验步骤"><a href="#3-实验步骤" class="headerlink" title="3. 实验步骤"></a>3. 实验步骤</h2><h3 id="1-根据原理图搭建电路。"><a href="#1-根据原理图搭建电路。" class="headerlink" title="1. 根据原理图搭建电路。"></a>1. 根据原理图搭建电路。</h3><p>数码管的A,B,C,D,E,F,G,DP引脚分别接入开发板的数字管脚7，6，5，10，11，8，9，4。数码管公共端接限流电阻，电阻另一端接GND。</p>
 <p>实验原理图如下图所示：</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160807_959.jpg" alt="实验原理图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160807_959.jpg" alt="实验原理图"></p>
 <p>实物连接图如下图所示：</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160807_135.jpg" alt="实物连接图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160807_135.jpg" alt="实物连接图"></p>
 <h3 id="2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"><a href="#2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。" class="headerlink" title="2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"></a>2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。</h3><pre class=" language-C++"><code class="language-C++">/*
 NixieTube
 控制共阴极数码管显示数字0到9
@@ -730,9 +730,9 @@ delay(200);
 }
 
 }</code></pre>
-<h3 id="3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。"><a href="#3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。" class="headerlink" title="3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。"></a>3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。</h3><p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160808_312.jpg" alt="程序下载">    </p>
+<h3 id="3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。"><a href="#3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。" class="headerlink" title="3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。"></a>3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160808_312.jpg" alt="程序下载">    </p>
 <h2 id="3-实验现象"><a href="#3-实验现象" class="headerlink" title="3. 实验现象"></a>3. 实验现象</h2><p>数码管循环显示数字0到9。</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160808_547.gif" alt="实验现象"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160808_547.gif" alt="实验现象"></p>
 <h2 id="4-实验分析"><a href="#4-实验分析" class="headerlink" title="4. 实验分析"></a>4. 实验分析</h2><p>程序中定义了一个二位数组用来存储0到9的段码显示。然后在loop中通过for()循环遍历显示0到9，每个数字分别读取对应的段码表来控制相应段LED的亮灭。</p>
 <p>根据使用场所和需求的不同，LED被封装成不同类型的数码管，但其基本原理都是相同的，都需要控制每一个LED的亮灭最终拼凑成需要显示的数字、字母甚至是汉字。</p>
 <script>
@@ -1145,7 +1145,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="/libs/tocbot/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1335,11 +1335,11 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
@@ -1361,12 +1361,10 @@ $(function () {
 </script>
 
     
-    <script src="/libs/others/clicklove.js" async="async"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-
+    <script async src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1376,9 +1374,11 @@ $(function () {
     
 
     
+
     
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>

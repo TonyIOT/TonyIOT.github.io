@@ -19,15 +19,15 @@
     <title>Arduino基础入门篇21—点阵流动显示 | Tonyの博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/jquery/jquery.min.js"></script>
     
 <style type="text/css" lang="css">
     #loading-container{
@@ -510,7 +510,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -665,9 +665,9 @@
 <h2 id="2-实验步骤"><a href="#2-实验步骤" class="headerlink" title="2. 实验步骤"></a>2. 实验步骤</h2><h3 id="1-根据原理图搭建电路。"><a href="#1-根据原理图搭建电路。" class="headerlink" title="1. 根据原理图搭建电路。"></a>1. 根据原理图搭建电路。</h3><p>依然是前篇点阵屏电路连接方式。根据点阵屏管脚定义，点阵屏的[9, 14, 8, 12, 1, 7, 2, 5]分别连接开发板的[6,11, 5, 9, 14, 4, 15, 2]，点阵屏的[13, 3, 4, 10, 6, 11, 15, 16]分别连接开发板的[10,16, 17, 7, 3, 8, 12, 13]。</p>
 <p>这里需要注意，Uno R3开发板的A0<del>A5也可以做普通GPIO使用，编号分别为14</del>19。</p>
 <p>实验原理图如下图所示：</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160819_194.jpg" alt="实验原理图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160819_194.jpg" alt="实验原理图"></p>
 <p>实物连接图如下图所示：</p>
-<p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160819_325.jpg" alt="实验原理图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160819_325.jpg" alt="实验原理图"></p>
 <h3 id="2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"><a href="#2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。" class="headerlink" title="2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"></a>2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。</h3><pre class=" language-c++"><code class="language-c++">/*
    Roll
    点阵屏流动显示
@@ -742,8 +742,8 @@ void loop() {
   }
 
 }</code></pre>
-<h3 id="3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。"><a href="#3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。" class="headerlink" title="3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。"></a>3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。</h3><p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160819_427.jpg" alt="程序下载"></p>
-<h3 id="4-程序下载后，点阵屏从右往左流动显示。"><a href="#4-程序下载后，点阵屏从右往左流动显示。" class="headerlink" title="4. 程序下载后，点阵屏从右往左流动显示。"></a>4. 程序下载后，点阵屏从右往左流动显示。</h3><p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160819_77.gif" alt="流动显示"></p>
+<h3 id="3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。"><a href="#3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。" class="headerlink" title="3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。"></a>3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160819_427.jpg" alt="程序下载"></p>
+<h3 id="4-程序下载后，点阵屏从右往左流动显示。"><a href="#4-程序下载后，点阵屏从右往左流动显示。" class="headerlink" title="4. 程序下载后，点阵屏从右往左流动显示。"></a>4. 程序下载后，点阵屏从右往左流动显示。</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160819_77.gif" alt="流动显示"></p>
 <h3 id="5-我们对loop-部分的程序进行修改，来改变每次流动的列数。"><a href="#5-我们对loop-部分的程序进行修改，来改变每次流动的列数。" class="headerlink" title="5. 我们对loop()部分的程序进行修改，来改变每次流动的列数。"></a>5. 我们对loop()部分的程序进行修改，来改变每次流动的列数。</h3><pre class=" language-c++"><code class="language-c++">void loop() {
 
   for (int a = 0; a < 16; a++) //控制流动显示内容
@@ -758,7 +758,7 @@ void loop() {
   }
 
 }</code></pre>
-<h3 id="6-当每次移动8列时，就会整屏覆盖翻页显示，效果如下："><a href="#6-当每次移动8列时，就会整屏覆盖翻页显示，效果如下：" class="headerlink" title="6. 当每次移动8列时，就会整屏覆盖翻页显示，效果如下："></a>6. 当每次移动8列时，就会整屏覆盖翻页显示，效果如下：</h3><p><img src="loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160820_945.gif" alt="翻页显示"></p>
+<h3 id="6-当每次移动8列时，就会整屏覆盖翻页显示，效果如下："><a href="#6-当每次移动8列时，就会整屏覆盖翻页显示，效果如下：" class="headerlink" title="6. 当每次移动8列时，就会整屏覆盖翻页显示，效果如下："></a>6. 当每次移动8列时，就会整屏覆盖翻页显示，效果如下：</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0/medias/loading.gif" data-original="http://pt5w6zbiy.bkt.clouddn.com/201906160820_945.gif" alt="翻页显示"></p>
 <h2 id="3-实验分析"><a href="#3-实验分析" class="headerlink" title="3. 实验分析"></a>3. 实验分析</h2><ol>
 <li>程序中定义了一个数组用于存储需要显示的字库，每8个表示一个字符，然后通过ledShow()函数来进行解析显示。使用for循环控制指定的列然后将传入的字符数据进行按位与，取出每一位进行操作。</li>
 <li>在loop()中三重for循环，最里面控制8列扫描显示，中间for循环用于控制显示时间，最外层for循环用于控制流动位置。</li>
@@ -1180,7 +1180,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="/libs/tocbot/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1370,11 +1370,11 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
@@ -1396,12 +1396,10 @@ $(function () {
 </script>
 
     
-    <script src="/libs/others/clicklove.js" async="async"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-
+    <script async src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1411,9 +1409,11 @@ $(function () {
     
 
     
+
     
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.0//libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
