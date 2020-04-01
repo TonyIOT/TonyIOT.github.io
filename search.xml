@@ -768,6 +768,31 @@
     
     
     <entry>
+      <title>树莓派笔记01—35美元的Linux超级计算机</title>
+      <link href="/posts/f02c.html"/>
+      <url>/posts/f02c.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401193726.jpg" alt=""></p><p>普及编程，服务大众是树莓派的一个理想，它打造了一个廉价、简洁、好玩、高效并能充分发挥创造力的开发平台，它的售价只有35美元，这大概是性价比最高的Linux计算机了吧。发挥你的想象，创作你的创作，人人都应该拥有一台树莓派。</p><h2 id="什么是树莓派（Raspberry-Pi）"><a href="#什么是树莓派（Raspberry-Pi）" class="headerlink" title="什么是树莓派（Raspberry Pi）"></a>什么是树莓派（Raspberry Pi）</h2><p>Raspberry Pi(中文名为「树莓派」,简写为 RPi/RasPi)是一种只有信用卡大小的卡片式电脑，其系统基于 Linux。</p><p>树莓派由注册于英国的慈善组织「Raspberry Pi 基金会」研发，最初的设计目标是用较为廉价的硬件和开源软件为儿童提供一个计算机教育平台。但其优秀的扩展性和易于开发的特性，使其不仅仅用于儿童教育，更是成为了极客们的玩具。树莓派被开发出了千千万万种玩法，并且普通人也可以轻松实现。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401193728.jpg" alt="目前最新版本：3B+"></p><h2 id="树莓派能做什么"><a href="#树莓派能做什么" class="headerlink" title="树莓派能做什么"></a>树莓派能做什么</h2><p>你可以在树莓派上安装摄像头、氢气球和传感器让它上天，去探索宇宙。你可以搭建私人气象站，智能家居控制中心又或者是做成摄像监控系统。</p><p>如果你只是想用于学习，那么接上显示器和键鼠就是一台 Linux 电脑了。你可以运行所有Linux下的程序，你可以用来运行你的Python、你的Shell，来学习Linux系统编程，无需虚拟机。</p><p>你也可以选择连接WiFi丢在墙角当作一台服务器，可以部署你的博客、你的网站、你的私有云。还有那些游戏机、机器人、3D打印机更是不在话下。除了不能拿来吃，它能干的还有很多很多。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401193730.jpg" alt="网友的灵感"></p><h2 id="树莓派种类"><a href="#树莓派种类" class="headerlink" title="树莓派种类"></a>树莓派种类</h2><p>树莓派是全球范围内销售量最大的 mini 单板机电脑，其前后发布版本如下表所示：</p><table><thead><tr><th>发布时间</th><th align="center">版本型号</th></tr></thead><tbody><tr><td>2011-12</td><td align="center">Raspberry Pi Model B</td></tr><tr><td>2014-07</td><td align="center">Raspberry Pi Model B+</td></tr><tr><td>2014-11</td><td align="center">Raspberry Pi Model A+</td></tr><tr><td>2015-02</td><td align="center">Raspberry Pi 2 Model B</td></tr><tr><td>2015-11</td><td align="center">Raspberry Pi Zero</td></tr><tr><td>2016-02</td><td align="center">Raspberry Pi 3 Model B</td></tr><tr><td>2017-02</td><td align="center">Raspberry Pi Zero W</td></tr><tr><td>2018-03</td><td align="center">Raspberry Pi 3 Model B+</td></tr></tbody></table><p>树莓派在硬件性能上不断提升，价格依然保持不变，绝对良心的加量不加价，而且软件硬件兼容性很好，这使得你在3B上开发的程序完全可以在Zero上运行而不需要过多的修改。</p><p>一张树莓派的全家福，你拥有多少呢？</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401193724.jpg" alt="树莓派全家福"></p><p>普及编程，服务大众。开源的力量，不是说我们可以免费享用他人的成果，而是说集合全世界的力量。这种力量也是推动树莓派兴起的重要原因。开源，将DIY（Do it yourself）变成了DIT（Do it together），使得树莓派有着无限可能。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 树莓派 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树莓派 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Arduino基础入门篇06——流动的LED灯</title>
       <link href="/posts/6a8f.html"/>
       <url>/posts/6a8f.html</url>
