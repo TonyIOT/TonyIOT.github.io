@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2020-04-01T03:02:29.370Z</updated>
+  <updated>2020-04-01T05:51:42.487Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试</title>
-    <link href="https://tonycode.top/posts/938d.html"/>
-    <id>https://tonycode.top/posts/938d.html</id>
-    <published>2020-04-01T03:00:02.000Z</published>
-    <updated>2020-04-01T03:02:29.370Z</updated>
+    <title>Arduino-Basics-01</title>
+    <link href="https://tonycode.top/posts/c40.html"/>
+    <id>https://tonycode.top/posts/c40.html</id>
+    <published>2018-06-12T02:24:15.000Z</published>
+    <updated>2020-04-01T05:51:42.487Z</updated>
     
     <summary type="html">
     
@@ -29,25 +29,19 @@
       
         
         
-          &lt;p&gt;ds测试&lt;/p&gt;
-&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) {
+          &lt;p&gt;欢迎来到Arduino的世界，本文主要介绍Arduino的优势，开发所涉及的硬件分类，开发语言及开发环境的下载。可登陆&lt;a href=&quot;https://www.arduino.cc/&quot; target=&quot;_blank&quot;
         
       
     
     </summary>
     
     
-      <category term="嵌入式" scheme="https://tonycode.top/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
     
       <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
     
-      <category term="Arduino2" scheme="https://tonycode.top/tags/Arduino2/"/>
-    
-      <category term="Arduino3" scheme="https://tonycode.top/tags/Arduino3/"/>
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
     
   </entry>
   
