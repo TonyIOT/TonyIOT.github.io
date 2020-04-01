@@ -44,6 +44,94 @@
   </entry>
   
   <entry>
+    <title>树莓派笔记08—Python点亮LED</title>
+    <link href="https://tonycode.top/posts/d5a.html"/>
+    <id>https://tonycode.top/posts/d5a.html</id>
+    <published>2019-11-09T21:54:08.000Z</published>
+    <updated>2020-04-01T12:38:33.319Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="树莓派" scheme="https://tonycode.top/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+    
+      <category term="树莓派" scheme="https://tonycode.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+      <category term="Python" scheme="https://tonycode.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派笔记07—wiringPi点亮LED</title>
+    <link href="https://tonycode.top/posts/6d46.html"/>
+    <id>https://tonycode.top/posts/6d46.html</id>
+    <published>2019-11-09T21:54:01.000Z</published>
+    <updated>2020-04-01T12:38:20.438Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="树莓派" scheme="https://tonycode.top/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+    
+      <category term="树莓派" scheme="https://tonycode.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+      <category term="wiringPi" scheme="https://tonycode.top/tags/wiringPi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派笔记06—树莓派GPIO介绍和wiringPi库安装</title>
+    <link href="https://tonycode.top/posts/f7e3.html"/>
+    <id>https://tonycode.top/posts/f7e3.html</id>
+    <published>2019-11-09T21:53:54.000Z</published>
+    <updated>2020-04-01T12:38:07.110Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;树莓派开发板上提供了大量的GPIO引脚，它们通过40Pin的排针引出，早期版本只有26Pin。除去通用输入输出引脚、5V/3.3V电源和地引脚外，还提供了SPI、UART和IIC接口，新版本的开发板在原有基础上不断进行功能的扩展。&lt;/p&gt;
+&lt;p&gt;###1.
+        
+      
+    
+    </summary>
+    
+    
+      <category term="树莓派" scheme="https://tonycode.top/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+    
+      <category term="GPIO" scheme="https://tonycode.top/tags/GPIO/"/>
+    
+      <category term="wiringPi" scheme="https://tonycode.top/tags/wiringPi/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Arduino基础—两线IIC驱动LCD1602</title>
     <link href="https://tonycode.top/posts/ade4.html"/>
     <id>https://tonycode.top/posts/ade4.html</id>
@@ -508,93 +596,6 @@
       <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
     
       <category term="时钟" scheme="https://tonycode.top/tags/%E6%97%B6%E9%92%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino基础入门篇17—四位数码管的驱动</title>
-    <link href="https://tonycode.top/posts/ddf7.html"/>
-    <id>https://tonycode.top/posts/ddf7.html</id>
-    <published>2018-09-05T07:11:24.000Z</published>
-    <updated>2020-04-01T08:28:49.289Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
-    
-      <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino基础入门篇16—数码管库的使用</title>
-    <link href="https://tonycode.top/posts/554d.html"/>
-    <id>https://tonycode.top/posts/554d.html</id>
-    <published>2018-09-05T02:28:14.000Z</published>
-    <updated>2020-04-01T08:25:28.353Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
-    
-      <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino基础入门篇15—随机骰子</title>
-    <link href="https://tonycode.top/posts/8d40.html"/>
-    <id>https://tonycode.top/posts/8d40.html</id>
-    <published>2018-08-30T07:54:20.000Z</published>
-    <updated>2020-04-01T08:22:16.940Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
-    
-      <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
     
   </entry>
   

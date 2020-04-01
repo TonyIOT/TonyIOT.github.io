@@ -29,6 +29,87 @@
     
     
     <entry>
+      <title>树莓派笔记08—Python点亮LED</title>
+      <link href="/posts/d5a.html"/>
+      <url>/posts/d5a.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401202310.jpg" alt=""></p><p>RPI.GPIO「raspberry-gpio-python」是Python的一个模块，允许你在执行Python脚本的时候轻松访问和控制GPIO，最新发布的树莓派系统已经内置安装了这个库，但是目前还没有支持SPI、IIC、硬件PWM和串口等接口。</p><p>####1. 树莓派中安装python及GPIO库</p><ul><li>先安装python-dev，输入如下指令：</li></ul><pre class=" language-c"><code class="language-c">sudo apt<span class="token operator">-</span>get install python<span class="token operator">-</span>dev</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401202319.jpg" alt="安装python-dev"></p><ul><li><p>由于不可描述的原因，GPIO库每次下载都会连接超时。文末提供了目前官网最新代码压缩包，后续直接解压安装即可。</p></li><li><p>解压我们下载好的压缩包。</p></li></ul><pre class=" language-c"><code class="language-c">tar xvzf RPI<span class="token punctuation">.</span>GPIO<span class="token number">-0.7</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz</code></pre><p>如下图：</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401202327.jpg" alt="解压"></p><ul><li>进入解压缩后的目录「cd RPi.GPIO-0.7.0/」，输入如下命令进行启动安装。</li></ul><pre class=" language-c"><code class="language-c">sudo python setup<span class="token punctuation">.</span>py install</code></pre><p>如下图：</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401202320.jpg" alt="安装"></p><h4 id="2-硬件连接"><a href="#2-硬件连接" class="headerlink" title="2. 硬件连接"></a>2. 硬件连接</h4><p>LED发光二极管的负极连接到树莓派的GND，LED的正极连接一个220欧的限流电阻分别连接到树莓派的11，13，15，19引脚。</p><p>电路连接图如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401202318.jpg" alt="电路连接图"></p><h3 id="3-编写Python代码实现流水灯"><a href="#3-编写Python代码实现流水灯" class="headerlink" title="3. 编写Python代码实现流水灯"></a>3. 编写Python代码实现流水灯</h3><p>新建一个名为leds.py的文件，内容如下所示：</p><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># encoding: utf-8</span><span class="token keyword">import</span> RPi<span class="token punctuation">.</span>GPIO <span class="token keyword">as</span> GPIO<span class="token keyword">import</span> time<span class="token comment" spellcheck="true">#BOAED编号方式，基于排针引脚编号</span>pins <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">;</span>GPIO<span class="token punctuation">.</span>setmode<span class="token punctuation">(</span>GPIO<span class="token punctuation">.</span>BOARD<span class="token punctuation">)</span><span class="token keyword">for</span> pin <span class="token keyword">in</span> pins<span class="token punctuation">:</span>    GPIO<span class="token punctuation">.</span>setup<span class="token punctuation">(</span>pin<span class="token punctuation">,</span> GPIO<span class="token punctuation">.</span>OUT<span class="token punctuation">)</span>    GPIO<span class="token punctuation">.</span>output<span class="token punctuation">(</span>pin<span class="token punctuation">,</span> GPIO<span class="token punctuation">.</span>LOW<span class="token punctuation">)</span><span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>    <span class="token keyword">for</span> pin <span class="token keyword">in</span> pins<span class="token punctuation">:</span>        GPIO<span class="token punctuation">.</span>output<span class="token punctuation">(</span>pin<span class="token punctuation">,</span> GPIO<span class="token punctuation">.</span>HIGH<span class="token punctuation">)</span>        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span>        GPIO<span class="token punctuation">.</span>output<span class="token punctuation">(</span>pin<span class="token punctuation">,</span> GPIO<span class="token punctuation">.</span>LOW<span class="token punctuation">)</span>        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span></code></pre><p>若是在windows中编写，需要将文件下载到树莓派中。接着输入如下命令来执行程序：</p><pre class=" language-c"><code class="language-c">sudo python leds<span class="token punctuation">.</span>py</code></pre><p>可以看到LED流动闪烁。通过「Ctrl+C」结束程序。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401202328.gif" alt="流水灯"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 树莓派 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树莓派 </tag>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>树莓派笔记07—wiringPi点亮LED</title>
+      <link href="/posts/6d46.html"/>
+      <url>/posts/6d46.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201855.jpg" alt=""></p><p>安装完wiringPi库后，我们就可以使用它来操作GPIO了，而点亮发光二极管的实验就如同「Hello World」一样神圣，本篇就在树莓派上驱动LED灯闪烁。</p><h4 id="1-硬件连接"><a href="#1-硬件连接" class="headerlink" title="1. 硬件连接"></a>1. 硬件连接</h4><p>LED发光二极管的负极连接到树莓派的GND，LED的正极连接一个220欧的限流电阻连接到树莓派的11脚。</p><p>电路连接图如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201901.jpg" alt="电路连接图"></p><p>远程登陆到树莓派，在终端中输入「gpio readall」，可获取到引脚对应关系，我们可以看到，树莓派板载排针的11引脚对应的是wiringPi库的0引脚。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201907.jpg" alt="引脚信息"></p><h4 id="2-终端一行代码实现LED灯闪烁"><a href="#2-终端一行代码实现LED灯闪烁" class="headerlink" title="2. 终端一行代码实现LED灯闪烁"></a>2. 终端一行代码实现LED灯闪烁</h4><p>wiringPi库内置了一个gpio函数，该函数可以直接从终端访问GPIO，而无需编写任何代码。在终端中输入「gpio -h」可获取到gpio函数的应用说明：</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201904.jpg" alt="gpio帮助"></p><p>我们在终端输入如下命令：</p><pre class=" language-c"><code class="language-c">gpio blink <span class="token number">0</span></code></pre><p>可以看到LED开始闪烁。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201910.gif" alt="闪烁"></p><p>按下键盘上「Ctrl+C」可退出。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201909.jpg" alt="退出"></p><h4 id="4-wiringPi编程实现LED灯闪烁"><a href="#4-wiringPi编程实现LED灯闪烁" class="headerlink" title="4. wiringPi编程实现LED灯闪烁"></a>4. wiringPi编程实现LED灯闪烁</h4><p>新建一个名为blink.c的文件，内容如下所示：</p><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;wiringPi.h></span></span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token function">wiringPiSetup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token function">pinMode</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> OUTPUT<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>    <span class="token punctuation">{</span>        <span class="token function">digitalWrite</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> HIGH<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">digitalWrite</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> LOW<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><p>若是在windows中编写，需要将文件下载到树莓派中。在文件当前目录下输入gcc指令来编译程序：</p><pre class=" language-c"><code class="language-c">gcc <span class="token operator">-</span>Wall <span class="token operator">-</span>o blink blink<span class="token punctuation">.</span>c <span class="token operator">-</span>lwiringPi</code></pre><p>接着输入如下命令执行编译好的程序：</p><pre class=" language-c"><code class="language-c">sudo <span class="token punctuation">.</span><span class="token operator">/</span>blink</code></pre><p>可以看到LED灯闪烁，我们可以改变延时时间来控制LED灯闪烁频率。通过「Ctrl+C」结束程序。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201908.jpg" alt="运行"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 树莓派 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树莓派 </tag>
+            
+            <tag> wiringPi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>树莓派笔记06—树莓派GPIO介绍和wiringPi库安装</title>
+      <link href="/posts/f7e3.html"/>
+      <url>/posts/f7e3.html</url>
+      
+        <content type="html"><![CDATA[<p>树莓派开发板上提供了大量的GPIO引脚，它们通过40Pin的排针引出，早期版本只有26Pin。除去通用输入输出引脚、5V/3.3V电源和地引脚外，还提供了SPI、UART和IIC接口，新版本的开发板在原有基础上不断进行功能的扩展。</p><p>###1. GPIO编号方式</p><p>树莓派的GPIO端口编号存在三种不同的方式：</p><ul><li>物理「BOARD」编号方式：</li></ul><p>从左到右，从上到下，左边奇数，右边偶数，1-40。这种编号方式的优点是无论开发板版本如何变化，我们的硬件都能正常工作，无需重新连接。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201028.jpg" alt="40pin"></p><ul><li>BCM编号方式：</li></ul><p>指的是板载的博通CPU上的GPIO编号，侧重CPU寄存器。由于CPU有大量的引脚，所以内部分配的引脚编号和板载排针的编号不一致。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201030.jpg" alt="BCM编号"></p><ul><li>wiringPi编号方式：</li></ul><p>侧重实现逻辑，把对外引出的GPIO端口从0开始编号，非常方便程序的编写。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201029.jpg" alt="40Pin对照表"></p><h3 id="2-wiringPi库介绍"><a href="#2-wiringPi库介绍" class="headerlink" title="2. wiringPi库介绍"></a>2. wiringPi库介绍</h3><p>wiringPi是由Gordon用C语言编写的库，起初主要作为BCM2835芯片的GPIO库，而现在已经非常的丰富，除去GPIO库，还包括了IIC库、SPI库、UART库和软件PWM库等。</p><p>wiringPi库非常适合那些具有C基础，在此之前接触过单片机或者嵌入式的开发人群。它的API函数和arduino的非常相似，这也使它受到极大的欢迎。</p><h3 id="3-安装wiringPi"><a href="#3-安装wiringPi" class="headerlink" title="3. 安装wiringPi"></a>3. 安装wiringPi</h3><h4 id="1-通过SSH远程登陆到树莓派，然后输入如下命令，更新树莓派各软件包和依赖到最新版本。"><a href="#1-通过SSH远程登陆到树莓派，然后输入如下命令，更新树莓派各软件包和依赖到最新版本。" class="headerlink" title="1. 通过SSH远程登陆到树莓派，然后输入如下命令，更新树莓派各软件包和依赖到最新版本。"></a>1. 通过SSH远程登陆到树莓派，然后输入如下命令，更新树莓派各软件包和依赖到最新版本。</h4><pre class=" language-c"><code class="language-c">sudo apt<span class="token operator">-</span>get updatesudo apt<span class="token operator">-</span>get upgrade</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201031.jpg" alt="update"></p><h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><p>wiringPi已经预装在了标准的树莓派系统中，可以输入如下命令进行更新或安装。</p><pre class=" language-c"><code class="language-c">sudo apt<span class="token operator">-</span>get install wiringpi</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201032.jpg" alt="安装wiringPi"></p><h4 id="3-测试"><a href="#3-测试" class="headerlink" title="3. 测试"></a>3. 测试</h4><p>wiringPi包括了一套gpio命令，使用gpio命令可控制树莓派的各个接口。</p><p>输入如下命令，可显示当前wiringPi库版本和当前树莓派开发板的信息。</p><pre class=" language-c"><code class="language-c">gpio <span class="token operator">-</span>v</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201033.jpg" alt="版本"></p><p>输入如下命令，可以获取引脚对应表。</p><pre class=" language-c"><code class="language-c">gpio readall</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401201027.jpg" alt="打印管脚信息"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 树莓派 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GPIO </tag>
+            
+            <tag> wiringPi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Arduino基础—两线IIC驱动LCD1602</title>
       <link href="/posts/ade4.html"/>
       <url>/posts/ade4.html</url>
@@ -654,6 +735,83 @@
     
     
     <entry>
+      <title>树莓派笔记05—Xrdp实现Windows远程登陆树莓派桌面</title>
+      <link href="/posts/dad9.html"/>
+      <url>/posts/dad9.html</url>
+      
+        <content type="html"><![CDATA[<p>给树莓派搭配显示器和键鼠后，它就是台电脑了。如果没有显示器，你也可以借助软件通过SSH远程登陆，这种方式是不会显示树莓派桌面的。</p><p>通过屏幕利用键鼠或者通过SSH登陆树莓派，对其安装相关软件后，可使用Windows自带的远程桌面软件来远程访问树莓派桌面应用。</p><h4 id="1-安装Xrdp，执行如下命令："><a href="#1-安装Xrdp，执行如下命令：" class="headerlink" title="1. 安装Xrdp，执行如下命令："></a>1. 安装Xrdp，执行如下命令：</h4><pre class=" language-C"><code class="language-C">sudo apt-get install xrdp</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200603.jpg" alt="安装Xrdp"></p><h4 id="2-安装VNC服务，执行如下命令："><a href="#2-安装VNC服务，执行如下命令：" class="headerlink" title="2. 安装VNC服务，执行如下命令："></a>2. 安装VNC服务，执行如下命令：</h4><pre class=" language-C"><code class="language-C">sudo apt-get install tightvncserver</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200605.jpg" alt="安装VNC服务"></p><h4 id="3-启动Xrdp服务，执行如下命令："><a href="#3-启动Xrdp服务，执行如下命令：" class="headerlink" title="3. 启动Xrdp服务，执行如下命令："></a>3. 启动Xrdp服务，执行如下命令：</h4><pre class=" language-C"><code class="language-C">sudo /etc/init.d/xrdp start</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200604.jpg" alt="启动Xrdp服务"></p><h4 id="4-将Xrdp服务添加到系统默认启动服务中。"><a href="#4-将Xrdp服务添加到系统默认启动服务中。" class="headerlink" title="4. 将Xrdp服务添加到系统默认启动服务中。"></a>4. 将Xrdp服务添加到系统默认启动服务中。</h4><pre class=" language-C"><code class="language-C">sudo update-rc.d xrdp defaults</code></pre><h4 id="5-打开Windows远程桌面连接，输入你的树莓派IP地址，点击连接。"><a href="#5-打开Windows远程桌面连接，输入你的树莓派IP地址，点击连接。" class="headerlink" title="5. 打开Windows远程桌面连接，输入你的树莓派IP地址，点击连接。"></a>5. 打开Windows远程桌面连接，输入你的树莓派IP地址，点击连接。</h4><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200606.jpg" alt="远程桌面"></p><h4 id="6-输入用户名和密码进行登陆。树莓派默认用户名：pi，默认密码：raspberry。"><a href="#6-输入用户名和密码进行登陆。树莓派默认用户名：pi，默认密码：raspberry。" class="headerlink" title="6. 输入用户名和密码进行登陆。树莓派默认用户名：pi，默认密码：raspberry。"></a>6. 输入用户名和密码进行登陆。树莓派默认用户名：pi，默认密码：raspberry。</h4><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200607.jpg" alt="输入用户名密码"></p><h4 id="7-登陆成功，可以把树莓派放在角落里远程操作啦。"><a href="#7-登陆成功，可以把树莓派放在角落里远程操作啦。" class="headerlink" title="7. 登陆成功，可以把树莓派放在角落里远程操作啦。"></a>7. 登陆成功，可以把树莓派放在角落里远程操作啦。</h4><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200602.jpg" alt="登陆成功"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 树莓派 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树莓派 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>树莓派笔记04—树莓派更换更新源</title>
+      <link href="/posts/21f3.html"/>
+      <url>/posts/21f3.html</url>
+      
+        <content type="html"><![CDATA[<p>树莓派系统安装后默认使用国外的镜像源来更新软件，由于不可描述原因，国内访问速度非常慢，因此需要换成国内源。树莓派官方提供了一个<a href="http://www.raspbian.org/RaspbianMirrors" target="_blank" rel="noopener">更新源列表</a>，在这里我们使用中科大的软件源和系统源。</p><h4 id="1-登陆到树莓派。你可以通过屏幕键鼠直接打开终端或者通过SSH登陆到树莓派。"><a href="#1-登陆到树莓派。你可以通过屏幕键鼠直接打开终端或者通过SSH登陆到树莓派。" class="headerlink" title="1. 登陆到树莓派。你可以通过屏幕键鼠直接打开终端或者通过SSH登陆到树莓派。"></a>1. 登陆到树莓派。你可以通过屏幕键鼠直接打开终端或者通过SSH登陆到树莓派。</h4><h4 id="2-备份源文件。执行如下命令："><a href="#2-备份源文件。执行如下命令：" class="headerlink" title="2. 备份源文件。执行如下命令："></a>2. 备份源文件。执行如下命令：</h4><pre class=" language-C"><code class="language-C">sudo cp /etc/apt/sources.list /etc/apt/sources.list.baksudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200136.jpg" alt="备份源文件"></p><h4 id="3-修改软件更新源，执行如下命令："><a href="#3-修改软件更新源，执行如下命令：" class="headerlink" title="3. 修改软件更新源，执行如下命令："></a>3. 修改软件更新源，执行如下命令：</h4><pre class=" language-C"><code class="language-C">sudo nano /etc/apt/sources.list</code></pre><h4 id="4-将第一行修改成中科大的软件源地址，「Ctrl-O」进行保存，然后回车，「Ctrl-X」退出。"><a href="#4-将第一行修改成中科大的软件源地址，「Ctrl-O」进行保存，然后回车，「Ctrl-X」退出。" class="headerlink" title="4. 将第一行修改成中科大的软件源地址，「Ctrl+O」进行保存，然后回车，「Ctrl+X」退出。"></a>4. 将第一行修改成中科大的软件源地址，「Ctrl+O」进行保存，然后回车，「Ctrl+X」退出。</h4><pre class=" language-C"><code class="language-C">deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpi</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200138.jpg" alt="修改软件源"></p><h4 id="5-修改系统更新源，执行如下命令："><a href="#5-修改系统更新源，执行如下命令：" class="headerlink" title="5. 修改系统更新源，执行如下命令："></a>5. 修改系统更新源，执行如下命令：</h4><pre class=" language-C"><code class="language-C">sudo nano /etc/apt/sources.list.d/raspi.list</code></pre><h4 id="6-将第一行修改成中科大的系统源地址，「Ctrl-O」进行保存，然后回车，「Ctrl-X」退出。"><a href="#6-将第一行修改成中科大的系统源地址，「Ctrl-O」进行保存，然后回车，「Ctrl-X」退出。" class="headerlink" title="6. 将第一行修改成中科大的系统源地址，「Ctrl+O」进行保存，然后回车，「Ctrl+X」退出。"></a>6. 将第一行修改成中科大的系统源地址，「Ctrl+O」进行保存，然后回车，「Ctrl+X」退出。</h4><pre class=" language-C"><code class="language-C">deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ stretch main ui</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200139.jpg" alt="修改系统源"></p><h4 id="7-同步更新源，执行如下命令："><a href="#7-同步更新源，执行如下命令：" class="headerlink" title="7. 同步更新源，执行如下命令："></a>7. 同步更新源，执行如下命令：</h4><pre class=" language-C"><code class="language-C">sudo apt-get update</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200140.jpg" alt="同步更新源"></p><h4 id="8-更新升级以安装软件包，这个过程耗时较长。"><a href="#8-更新升级以安装软件包，这个过程耗时较长。" class="headerlink" title="8. 更新升级以安装软件包，这个过程耗时较长。"></a>8. 更新升级以安装软件包，这个过程耗时较长。</h4><pre class=" language-C"><code class="language-C">sudo apt-get upgrade</code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401200137.jpg" alt="软件升级"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 树莓派 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树莓派 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>树莓派笔记03—树莓派系统安装</title>
+      <link href="/posts/7038.html"/>
+      <url>/posts/7038.html</url>
+      
+        <content type="html"><![CDATA[<p>树莓派上可以运行多种操作系统，除去官方操作系统外，还支持很多第三方操作系统。具体可登陆<a href="https://www.raspberrypi.org/downloads/" target="_blank" rel="noopener">树莓派官网</a>查看。本篇安装当前使用最广的Raspbian官方操作系统。</p><h2 id="1-系统下载"><a href="#1-系统下载" class="headerlink" title="1. 系统下载"></a>1. 系统下载</h2><p>Raspbian预装了用于教育、编程和一般用途的软件，如Python、Scratch、Java等。登陆<a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" rel="noopener">官网</a>进行下载。在这里我们下载左侧带可视化图形桌面的版本。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195150.jpg" alt="系统下载"></p><h2 id="2-烧写镜像"><a href="#2-烧写镜像" class="headerlink" title="2. 烧写镜像"></a>2. 烧写镜像</h2><ol><li>对下载好的系统压缩包进行解压缩，得到img镜像文件。</li><li>使用读卡器将准备好的Micro SD卡插入电脑。</li><li>Windows系统下使用<a href="http://nchc.dl.sourceforge.net/project/win32diskimager/Archive/Win32DiskImager-0.9.5-install.exe" target="_blank" rel="noopener">Win32 Disk Imager</a>工具进行镜像烧写。</li></ol><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195152.jpg" alt="烧写镜像"></p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195149.jpg" alt="烧写完成"></p><h2 id="3-启动树莓派"><a href="#3-启动树莓派" class="headerlink" title="3. 启动树莓派"></a>3. 启动树莓派</h2><h3 id="有显示器的情况"><a href="#有显示器的情况" class="headerlink" title="有显示器的情况"></a>有显示器的情况</h3><p>将烧写好镜像的SD卡插入树莓派，将键鼠和显示器连接到树莓派，给树莓派上电。待系统运行后进入桌面。第一次登陆桌面显示配置向导，自动引导用户设置开机密码、WiFi、本地化等。</p><ol><li><p>点击Next根据向导进行基本配置。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195151.jpg" alt="向导配置"></p></li><li><p>设置国家。点击Next下一步。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195153.jpg" alt="设置国家"></p></li><li><p>设置用户密码。初始的用户名：pi，密码：raspberry。可以自行设置用户密码，点击Next进入下一步。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195154.jpg" alt="设置密码"></p></li><li><p>选择WiFi并输入密码，点击Next下一步。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195155.jpg" alt="选择WiFi"></p></li><li><p>检查更新。点击Next下一步。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195156.jpg" alt="检查更新"></p></li><li><p>配置完成，进行重启。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195151.jpg" alt="配置完成"></p></li></ol><h3 id="没有显示器的情况"><a href="#没有显示器的情况" class="headerlink" title="没有显示器的情况"></a>没有显示器的情况</h3><p>如果没有显示器，我们可以通过SSH的方式来远程登陆树莓派。</p><ol><li><p>开启SSH。之前的Raspbian系统默认是开启SSH的，后来官方为了安全考录，将其设置成默认关闭状态了。在SD卡的boot根目录下新建一个名为SSH的空文件，注意不能有扩展名！</p><p> <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195144.jpg" alt="新建SSH"></p></li><li><p>配置WiFi。在boot根目录下新建名为wpa_supplicant.conf的文件，里面内容编辑如下：</p></li></ol><pre class=" language-c"><code class="language-c">country<span class="token operator">=</span>GBctrl_interface<span class="token operator">=</span>DIR<span class="token operator">=</span><span class="token operator">/</span>var<span class="token operator">/</span>run<span class="token operator">/</span>wpa_supplicant GROUP<span class="token operator">=</span>netdevupdate_config<span class="token operator">=</span><span class="token number">1</span>network<span class="token operator">=</span><span class="token punctuation">{</span>ssid<span class="token operator">=</span><span class="token string">"替换成你的WiFi名"</span>psk<span class="token operator">=</span><span class="token string">"替换成你的WiFi密码"</span>priority<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">}</span></code></pre><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195145.jpg" alt="配置WiFi"></p><ol start="3"><li><p>将SD卡插入树莓派，给树莓派上电启动。进入路由器查看树莓派分配到的IP地址，这个很重要，SSH需要根据IP地址远程登陆。</p><p> <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195146.jpg" alt="查看IP地址"></p></li><li><p>使用Xshell或者Putty登陆树莓派。树莓派默认用户名：pi，默认登陆密码：raspberry。</p><p> <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195147.jpg" alt="输入用户名"></p></li><li><p>登陆成功。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401195148.jpg" alt="登陆成功"></p></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 树莓派 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树莓派 </tag>
+            
+            <tag> Raspbian </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Arduino基础入门篇10—电位器控制LED灯</title>
       <link href="/posts/474.html"/>
       <url>/posts/474.html</url>
@@ -760,6 +918,31 @@
             <tag> Led </tag>
             
             <tag> 按键 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>树莓派笔记02—树莓派硬件环境准备</title>
+      <link href="/posts/58fa.html"/>
+      <url>/posts/58fa.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401194808.jpg" alt=""></p><p>在开始玩转树莓派之前，我们需要了解下树莓派的硬件配置以及所需要的配件。跟电脑PC机类似，树莓派也需要必要的输入输出设备才能工作。</p><h2 id="1-树莓派3B"><a href="#1-树莓派3B" class="headerlink" title="1. 树莓派3B+"></a>1. 树莓派3B+</h2><p>2018年3月14日，树莓派基金会正式发布新版树莓派3B+，升级后的处理器拥有有利于散热的金属外壳封装，并改进了其网络功能，全新的Raspberry Pi 3B +的各方面性能和指标都超越其上一代产品Raspberry Pi 3B。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401194452.jpg" alt="树莓派硬件配置"></p><p>具体参数如下：</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401194455.jpg" alt="3B+硬件参数"></p><h2 id="2-配件准备"><a href="#2-配件准备" class="headerlink" title="2.配件准备"></a>2.配件准备</h2><p>树莓派本身只是一个主机，要运行起来，必须拥有相关配件。这包括电源 、Micro SD卡、显示器、键鼠等。</p><h3 id="电源"><a href="#电源" class="headerlink" title="电源"></a>电源</h3><p>树莓派的供电接口就是普通的Micro USB。但需要注意的是，不要用电脑的USB直接给树莓派供电，电流太小会影响其运行。官方推荐使用独立电源，电压5V，电流2.5A。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401194803.jpg" alt="官方电源"></p><h3 id="Micro-SD卡"><a href="#Micro-SD卡" class="headerlink" title="Micro SD卡"></a>Micro SD卡</h3><p>树莓派本身不带闪存，系统需要安装在存储卡中。Micro SD卡最小容量8G，推荐使用16G或者更高容量的卡，选择Class10，以保证兼容性和读写速度。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401194456.jpg" alt="Micro SD卡"></p><h3 id="显示器"><a href="#显示器" class="headerlink" title="显示器"></a>显示器</h3><p>树莓派有HDMI高清输出口，普通显示器或者电视机都可以通过HDMI来连接。不过显示器只有在安装系统时需要，后面可以通过SSH登陆了。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401194457.jpg" alt="显示器"></p><h3 id="键鼠"><a href="#键鼠" class="headerlink" title="键鼠"></a>键鼠</h3><p>任何标准USB键盘和鼠标都可以与树莓派一起使用。你只需要将他们插入树莓派的USB接口，即插即用，无需任何额外的驱动程序，树莓派在启动时自动识别它们。你也可以选择蓝牙键鼠，使用方便。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401194458.jpg" alt="微型键鼠"></p><p>现在你已经准备好了所需要的配件。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401194459.gif" alt="外设接入"></p><p>下一步我们就可以给树莓派安装系统了。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 树莓派 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树莓派 </tag>
             
         </tags>
       
