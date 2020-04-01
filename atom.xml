@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2020-04-01T06:37:00.763Z</updated>
+  <updated>2020-04-01T10:21:14.432Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Arduino基础入门篇32—LCD1602驱动库的使用</title>
-    <link href="https://tonycode.top/posts/8edb.html"/>
-    <id>https://tonycode.top/posts/8edb.html</id>
-    <published>2019-04-09T08:38:38.000Z</published>
-    <updated>2020-04-01T06:37:00.763Z</updated>
+    <title>Arduino基础—两线IIC驱动LCD1602</title>
+    <link href="https://tonycode.top/posts/ade4.html"/>
+    <id>https://tonycode.top/posts/ade4.html</id>
+    <published>2019-07-13T23:40:01.000Z</published>
+    <updated>2020-04-01T10:21:14.432Z</updated>
     
     <summary type="html">
     
@@ -36,8 +36,43 @@
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="LCD1602" scheme="https://tonycode.top/tags/LCD1602/"/>
+    
+      <category term="IIC" scheme="https://tonycode.top/tags/IIC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arduino基础入门篇32—LCD1602驱动库的使用</title>
+    <link href="https://tonycode.top/posts/8edb.html"/>
+    <id>https://tonycode.top/posts/8edb.html</id>
+    <published>2019-04-09T08:38:38.000Z</published>
+    <updated>2020-04-01T10:16:02.272Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
+    
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="LCD1602" scheme="https://tonycode.top/tags/LCD1602/"/>
     
   </entry>
   
@@ -46,7 +81,7 @@
     <link href="https://tonycode.top/posts/655d.html"/>
     <id>https://tonycode.top/posts/655d.html</id>
     <published>2019-04-09T05:24:26.000Z</published>
-    <updated>2020-04-01T06:37:00.761Z</updated>
+    <updated>2020-04-01T09:45:23.382Z</updated>
     
     <summary type="html">
     
@@ -61,8 +96,12 @@
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="LCD1602" scheme="https://tonycode.top/tags/LCD1602/"/>
     
   </entry>
   
@@ -71,7 +110,7 @@
     <link href="https://tonycode.top/posts/b30a.html"/>
     <id>https://tonycode.top/posts/b30a.html</id>
     <published>2019-04-05T11:19:54.000Z</published>
-    <updated>2020-04-01T06:37:00.758Z</updated>
+    <updated>2020-04-01T09:41:49.331Z</updated>
     
     <summary type="html">
     
@@ -79,16 +118,19 @@
       
         
         
-          &lt;p&gt;温度传感器的种类繁多，按照测量方式分为接触式和非接触式，按照传感器材料分为热电阻和热电偶两类，按照工作原理分为模拟式和数字式。上一篇介绍了模拟温度传感器LM35，本篇介绍数字温度传感器DS18B20的使用。&lt;/p&gt;
-&lt;h2 id=&quot;1-DS18B20介绍&quot;&gt;&lt;a
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
     
   </entry>
   
@@ -97,7 +139,7 @@
     <link href="https://tonycode.top/posts/d78a.html"/>
     <id>https://tonycode.top/posts/d78a.html</id>
     <published>2019-03-31T08:31:58.000Z</published>
-    <updated>2020-04-01T06:37:00.757Z</updated>
+    <updated>2020-04-01T09:38:23.434Z</updated>
     
     <summary type="html">
     
@@ -105,16 +147,19 @@
       
         
         
-          &lt;p&gt;温度传感器就是利用物质随温度变化特性的规律，把温度转换成可输出信号的传感器，是普遍应用的传感器之一。本篇介绍模拟温度传感器—LM35。&lt;/p&gt;
-&lt;h2 id=&quot;1-LM35介绍&quot;&gt;&lt;a href=&quot;#1-LM35介绍&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
     
   </entry>
   
@@ -123,7 +168,7 @@
     <link href="https://tonycode.top/posts/8a18.html"/>
     <id>https://tonycode.top/posts/8a18.html</id>
     <published>2019-03-21T23:44:20.000Z</published>
-    <updated>2020-04-01T06:37:00.755Z</updated>
+    <updated>2020-04-01T09:29:34.287Z</updated>
     
     <summary type="html">
     
@@ -131,16 +176,19 @@
       
         
         
-          &lt;p&gt;舵机是一种位置「角度」伺服的驱动器，适用于那些需要角度不断变化并可以保持的控制系统。目前在高档遥控玩具、航模、机器人中已经得到普遍使用。舵机是一种俗称，其实是一种伺服马达。本篇通过官方驱动库来实现舵机控制。&lt;/p&gt;
-&lt;h2 id=&quot;1-舵机介绍&quot;&gt;&lt;a
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="舵机" scheme="https://tonycode.top/tags/%E8%88%B5%E6%9C%BA/"/>
     
   </entry>
   
@@ -149,7 +197,7 @@
     <link href="https://tonycode.top/posts/c92a.html"/>
     <id>https://tonycode.top/posts/c92a.html</id>
     <published>2019-03-17T02:33:01.000Z</published>
-    <updated>2020-04-01T06:37:00.753Z</updated>
+    <updated>2020-04-01T09:26:22.654Z</updated>
     
     <summary type="html">
     
@@ -157,16 +205,19 @@
       
         
         
-          &lt;p&gt;本篇介绍步进电机驱动库的使用，通过读取电位器输入，控制步进电机转动相应角度。&lt;/p&gt;
-&lt;p&gt;Stepper库是官方提供的驱动库，我们启动Arduino IDE，点击「文件」—「示例」就能找到Stepper库，官方提供了四个例程。关于Stepper库可参考&lt;a
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="步进电机" scheme="https://tonycode.top/tags/%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA/"/>
     
   </entry>
   
@@ -175,7 +226,7 @@
     <link href="https://tonycode.top/posts/a153.html"/>
     <id>https://tonycode.top/posts/a153.html</id>
     <published>2019-03-16T12:49:30.000Z</published>
-    <updated>2020-04-01T06:37:00.750Z</updated>
+    <updated>2020-04-01T09:19:53.442Z</updated>
     
     <summary type="html">
     
@@ -183,16 +234,19 @@
       
         
         
-          &lt;p&gt;步进电机是一种将电脉冲转化为角位移的执行机构。通俗一点讲：当步进驱动器接收到一个脉冲信号，它就驱动步进电机按设定的方向转动一个固定的角度（即步进角），多用于雕刻机、3D打印机等需要精确控制的设备。本篇使用ULN2003驱动五线四相减速步进电机。&lt;/p&gt;
-&lt;h2
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="步进电机" scheme="https://tonycode.top/tags/%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA/"/>
     
   </entry>
   
@@ -201,7 +255,7 @@
     <link href="https://tonycode.top/posts/9611.html"/>
     <id>https://tonycode.top/posts/9611.html</id>
     <published>2018-10-09T13:01:07.000Z</published>
-    <updated>2020-04-01T06:37:00.747Z</updated>
+    <updated>2020-04-01T09:15:21.897Z</updated>
     
     <summary type="html">
     
@@ -209,16 +263,19 @@
       
         
         
-          &lt;p&gt;在日常生活中我们会接触到各式各样的遥控器，电视机、空调、机顶盒等都有专用的遥控器，很多智能手机也在软硬件上对红外遥控做了支持，可以集中遥控绝大部分家用电器。本篇介绍红外遥控相关原理及应用，通过红外遥控器控制Uno板载LED灯亮灭。&lt;/p&gt;
-&lt;h2
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="红外遥控" scheme="https://tonycode.top/tags/%E7%BA%A2%E5%A4%96%E9%81%A5%E6%8E%A7/"/>
     
   </entry>
   
@@ -227,7 +284,7 @@
     <link href="https://tonycode.top/posts/1486.html"/>
     <id>https://tonycode.top/posts/1486.html</id>
     <published>2018-09-26T07:13:01.000Z</published>
-    <updated>2020-04-01T06:37:00.744Z</updated>
+    <updated>2020-04-01T09:11:47.058Z</updated>
     
     <summary type="html">
     
@@ -235,16 +292,19 @@
       
         
         
-          &lt;p&gt;继电器是一种电子控制器件，是用较小的电流去控制较大电流的一种“自动开关”，通常应用于自动控制电路中起着自动调节、安全保护、转换电路等作用。 本篇介绍继电器的使用，通过串口发送命令来控制继电器动作。&lt;/p&gt;
-&lt;h2 id=&quot;1-继电器介绍&quot;&gt;&lt;a
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="继电器" scheme="https://tonycode.top/tags/%E7%BB%A7%E7%94%B5%E5%99%A8/"/>
     
   </entry>
   
@@ -253,7 +313,7 @@
     <link href="https://tonycode.top/posts/a4f2.html"/>
     <id>https://tonycode.top/posts/a4f2.html</id>
     <published>2018-09-25T12:38:27.000Z</published>
-    <updated>2020-04-01T06:37:00.742Z</updated>
+    <updated>2020-04-01T08:53:14.838Z</updated>
     
     <summary type="html">
     
@@ -261,16 +321,19 @@
       
         
         
-          &lt;p&gt;在很多时候，Arduino需要和其他设备相互通讯，而最常见最简单的方式就是串口通讯。本篇介绍Arduino硬件串口通讯，了解相关函数的使用。&lt;/p&gt;
-&lt;h2 id=&quot;1-硬件串口&quot;&gt;&lt;a href=&quot;#1-硬件串口&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="串口" scheme="https://tonycode.top/tags/%E4%B8%B2%E5%8F%A3/"/>
     
   </entry>
   
@@ -279,7 +342,7 @@
     <link href="https://tonycode.top/posts/d2dd.html"/>
     <id>https://tonycode.top/posts/d2dd.html</id>
     <published>2018-09-14T13:00:27.000Z</published>
-    <updated>2020-04-01T06:37:00.741Z</updated>
+    <updated>2020-04-01T08:47:47.096Z</updated>
     
     <summary type="html">
     
@@ -287,16 +350,19 @@
       
         
         
-          &lt;p&gt;Arduino开发板的普通IO引脚是有限的，必要时要对IO口进行扩展，才能满足外部设备对IO口的需求。本篇介绍74HC595芯片，使用它来扩展Arduino的IO口，用3个IO来控制8路LED灯。&lt;/p&gt;
-&lt;h2 id=&quot;1-74HC595介绍&quot;&gt;&lt;a
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="Led" scheme="https://tonycode.top/tags/Led/"/>
     
   </entry>
   
@@ -531,35 +597,6 @@
       <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
     
       <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino基础入门篇13—外部中断</title>
-    <link href="https://tonycode.top/posts/4366.html"/>
-    <id>https://tonycode.top/posts/4366.html</id>
-    <published>2018-08-27T08:27:19.000Z</published>
-    <updated>2020-04-01T08:01:37.085Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
-    
-      <category term="中断" scheme="https://tonycode.top/tags/%E4%B8%AD%E6%96%AD/"/>
     
   </entry>
   
