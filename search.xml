@@ -8,7 +8,7 @@
       <link href="/posts/f82e.html"/>
       <url>/posts/f82e.html</url>
       
-        <content type="html"><![CDATA[<p>的</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<p>的sadfxngjhkjkhjghgfsdsZ的想法的官方好几个客户的分割算法得到打发时光的环境开会两个范德萨</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
@@ -21,8 +21,6 @@
         <tags>
             
             <tag> Arduino </tag>
-            
-            <tag> 单片机 </tag>
             
         </tags>
       
