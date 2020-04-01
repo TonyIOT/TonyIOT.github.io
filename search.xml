@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/posts/f82e.html"/>
+      <url>/posts/f82e.html</url>
+      
+        <content type="html"><![CDATA[<p>的</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> C语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Arduino </tag>
+            
+            <tag> 单片机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Arduino基础入门篇32—LCD1602驱动库的使用</title>
       <link href="/posts/8edb.html"/>
       <url>/posts/8edb.html</url>

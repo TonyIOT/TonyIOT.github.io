@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//tonycode.top/"/>
-  <updated>2020-03-31T16:47:51.946Z</updated>
+  <updated>2020-04-01T00:38:33.696Z</updated>
   <id>//tonycode.top/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="posts/f82e.html"/>
+    <id>posts/f82e.html</id>
+    <published>2020-04-01T00:36:59.000Z</published>
+    <updated>2020-04-01T00:38:33.696Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;的&lt;/p&gt;
+&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="//tonycode.top/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="Arduino" scheme="//tonycode.top/tags/Arduino/"/>
+    
+      <category term="单片机" scheme="//tonycode.top/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>Arduino基础入门篇32—LCD1602驱动库的使用</title>
@@ -497,32 +530,6 @@
         
           &lt;p&gt;本篇介绍数码管显示器件，通过控制一位共阴极数码管动态显示数字0到9来了解数码管的使用。&lt;/p&gt;
 &lt;h2 id=&quot;1-数码管介绍&quot;&gt;&lt;a href=&quot;#1-数码管介绍&quot; class=&quot;headerlink&quot; title=&quot;1. 数码管介绍&quot;&gt;&lt;/a&gt;1.
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Arduino" scheme="//tonycode.top/tags/Arduino/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino基础入门篇13—外部中断</title>
-    <link href="posts/4366.html"/>
-    <id>posts/4366.html</id>
-    <published>2018-08-27T08:27:19.000Z</published>
-    <updated>2020-03-31T16:47:51.909Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;本篇介绍Arduino外部中断的使用，通过外部中断检测震动开关的触发来控制LED灯亮灭。&lt;/p&gt;
-&lt;h2 id=&quot;1-中断介绍&quot;&gt;&lt;a href=&quot;#1-中断介绍&quot; class=&quot;headerlink&quot; title=&quot;1. 中断介绍&quot;&gt;&lt;/a&gt;1.
         
       
     
