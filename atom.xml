@@ -513,7 +513,7 @@
     <link href="https://tonycode.top/posts/4366.html"/>
     <id>https://tonycode.top/posts/4366.html</id>
     <published>2018-08-27T08:27:19.000Z</published>
-    <updated>2020-04-01T06:37:00.719Z</updated>
+    <updated>2020-04-01T07:58:42.358Z</updated>
     
     <summary type="html">
     
@@ -521,16 +521,19 @@
       
         
         
-          &lt;p&gt;本篇介绍Arduino外部中断的使用，通过外部中断检测震动开关的触发来控制LED灯亮灭。&lt;/p&gt;
-&lt;h2 id=&quot;1-中断介绍&quot;&gt;&lt;a href=&quot;#1-中断介绍&quot; class=&quot;headerlink&quot; title=&quot;1. 中断介绍&quot;&gt;&lt;/a&gt;1.
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="中断" scheme="https://tonycode.top/tags/%E4%B8%AD%E6%96%AD/"/>
     
   </entry>
   
