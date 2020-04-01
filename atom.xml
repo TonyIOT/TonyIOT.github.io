@@ -305,7 +305,7 @@
     <link href="https://tonycode.top/posts/2d91.html"/>
     <id>https://tonycode.top/posts/2d91.html</id>
     <published>2018-09-13T01:44:39.000Z</published>
-    <updated>2020-04-01T06:37:00.739Z</updated>
+    <updated>2020-04-01T08:44:46.387Z</updated>
     
     <summary type="html">
     
@@ -313,16 +313,19 @@
       
         
         
-          &lt;p&gt;在各种公共场合看到的点阵屏大多都有流动显示效果，显示内容可以上下左右的滚动，本篇我们来实现点阵屏的流动显示。&lt;/p&gt;
-&lt;h2 id=&quot;1-实验材料&quot;&gt;&lt;a href=&quot;#1-实验材料&quot; class=&quot;headerlink&quot; title=&quot;1. 实验材料&quot;&gt;&lt;/a&gt;1.
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="点阵屏" scheme="https://tonycode.top/tags/%E7%82%B9%E9%98%B5%E5%B1%8F/"/>
     
   </entry>
   
@@ -331,7 +334,7 @@
     <link href="https://tonycode.top/posts/e6ca.html"/>
     <id>https://tonycode.top/posts/e6ca.html</id>
     <published>2018-09-12T06:33:09.000Z</published>
-    <updated>2020-04-01T06:37:00.736Z</updated>
+    <updated>2020-04-01T08:39:31.974Z</updated>
     
     <summary type="html">
     
@@ -339,17 +342,19 @@
       
         
         
-          &lt;p&gt;本篇继续学习LED点阵屏的使用，实现心型跳动效果。&lt;/p&gt;
-&lt;h2 id=&quot;1-实验材料&quot;&gt;&lt;a href=&quot;#1-实验材料&quot; class=&quot;headerlink&quot; title=&quot;1. 实验材料&quot;&gt;&lt;/a&gt;1. 实验材料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Uno
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="点阵屏" scheme="https://tonycode.top/tags/%E7%82%B9%E9%98%B5%E5%B1%8F/"/>
     
   </entry>
   
@@ -358,7 +363,7 @@
     <link href="https://tonycode.top/posts/dc39.html"/>
     <id>https://tonycode.top/posts/dc39.html</id>
     <published>2018-09-12T03:01:53.000Z</published>
-    <updated>2020-04-01T06:37:00.733Z</updated>
+    <updated>2020-04-01T08:37:12.168Z</updated>
     
     <summary type="html">
     
@@ -366,16 +371,19 @@
       
         
         
-          &lt;p&gt;将8个LED发光二极管封装在一起就组成了数码管，将更多的LED组合在一起就组成了点阵屏。本篇我们来认识点阵屏，通过Arduino的IO口直接驱动点阵屏来了解其驱动方式。&lt;/p&gt;
-&lt;h2 id=&quot;1-点阵屏介绍&quot;&gt;&lt;a href=&quot;#1-点阵屏介绍&quot;
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="点阵屏" scheme="https://tonycode.top/tags/%E7%82%B9%E9%98%B5%E5%B1%8F/"/>
     
   </entry>
   
@@ -384,7 +392,7 @@
     <link href="https://tonycode.top/posts/b847.html"/>
     <id>https://tonycode.top/posts/b847.html</id>
     <published>2018-09-11T01:31:02.000Z</published>
-    <updated>2020-04-01T06:37:00.730Z</updated>
+    <updated>2020-04-01T08:32:30.057Z</updated>
     
     <summary type="html">
     
@@ -392,15 +400,21 @@
       
         
         
-          &lt;p&gt;Arduino不但有外部中断，还有定时器中断，不同Arduino开发板其定时器数量及性能也各不相同，这取决于开发板主控制器。Uno
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
+    
+      <category term="时钟" scheme="https://tonycode.top/tags/%E6%97%B6%E9%92%9F/"/>
     
   </entry>
   
@@ -409,7 +423,7 @@
     <link href="https://tonycode.top/posts/ddf7.html"/>
     <id>https://tonycode.top/posts/ddf7.html</id>
     <published>2018-09-05T07:11:24.000Z</published>
-    <updated>2020-04-01T06:37:00.728Z</updated>
+    <updated>2020-04-01T08:28:49.289Z</updated>
     
     <summary type="html">
     
@@ -417,16 +431,19 @@
       
         
         
-          &lt;p&gt;本篇介绍四位数码管的使用，通过数码管库驱动四位数码管从0开始累加显示数字。&lt;/p&gt;
-&lt;h2 id=&quot;1-四位数码管介绍&quot;&gt;&lt;a href=&quot;#1-四位数码管介绍&quot; class=&quot;headerlink&quot; title=&quot;1. 四位数码管介绍&quot;&gt;&lt;/a&gt;1.
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
     
   </entry>
   
@@ -435,7 +452,7 @@
     <link href="https://tonycode.top/posts/554d.html"/>
     <id>https://tonycode.top/posts/554d.html</id>
     <published>2018-09-05T02:28:14.000Z</published>
-    <updated>2020-04-01T06:37:00.727Z</updated>
+    <updated>2020-04-01T08:25:28.353Z</updated>
     
     <summary type="html">
     
@@ -443,16 +460,19 @@
       
         
         
-          &lt;p&gt;Arduino官方提供了丰富的驱动库来方便对外设进行操作，很多爱好者也在开源精神下提供了很多第三方库。本篇介绍数码管库的使用，通过读取电位器输入，使用数码管库驱动数码管显示对应数据。&lt;/p&gt;
-&lt;p&gt;SevSeg库是数码管驱动库，常用于对4位数码管的驱动，该库可从Arduin
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
     
   </entry>
   
@@ -461,7 +481,7 @@
     <link href="https://tonycode.top/posts/8d40.html"/>
     <id>https://tonycode.top/posts/8d40.html</id>
     <published>2018-08-30T07:54:20.000Z</published>
-    <updated>2020-04-01T06:37:00.722Z</updated>
+    <updated>2020-04-01T08:22:16.940Z</updated>
     
     <summary type="html">
     
@@ -469,16 +489,19 @@
       
         
         
-          &lt;p&gt;上一篇介绍了数码管的使用，一位数码管可显示数字0到9。本篇使用random()函数产生随机数并在数码管上进行显示，制作一个随机骰子。&lt;/p&gt;
-&lt;p&gt;在Arduino中，random()函数用来产生伪随机数，可以传入一个区间，产生此区间内的随机数。通常情况下，在使用rando
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
     
   </entry>
   
@@ -487,7 +510,7 @@
     <link href="https://tonycode.top/posts/c280.html"/>
     <id>https://tonycode.top/posts/c280.html</id>
     <published>2018-08-30T05:53:46.000Z</published>
-    <updated>2020-04-01T06:37:00.724Z</updated>
+    <updated>2020-04-01T08:19:09.303Z</updated>
     
     <summary type="html">
     
@@ -495,16 +518,19 @@
       
         
         
-          &lt;p&gt;本篇介绍数码管显示器件，通过控制一位共阴极数码管动态显示数字0到9来了解数码管的使用。&lt;/p&gt;
-&lt;h2 id=&quot;1-数码管介绍&quot;&gt;&lt;a href=&quot;#1-数码管介绍&quot; class=&quot;headerlink&quot; title=&quot;1. 数码管介绍&quot;&gt;&lt;/a&gt;1.
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
         
       
     
     </summary>
     
     
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
     
-      <category term="Arduino" scheme="https://tonycode.top/tags/Arduino/"/>
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="数码管" scheme="https://tonycode.top/tags/%E6%95%B0%E7%A0%81%E7%AE%A1/"/>
     
   </entry>
   
