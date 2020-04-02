@@ -99,11 +99,42 @@
   </entry>
   
   <entry>
+    <title>小爱同学控制EP8266点灯</title>
+    <link href="https://tonycode.top/posts/1caf.html"/>
+    <id>https://tonycode.top/posts/1caf.html</id>
+    <published>2020-03-21T14:18:47.000Z</published>
+    <updated>2020-04-02T09:47:47.269Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ESP8266" scheme="https://tonycode.top/categories/ESP8266/"/>
+    
+    
+      <category term="物联网" scheme="https://tonycode.top/tags/%E7%89%A9%E8%81%94%E7%BD%91/"/>
+    
+      <category term="WiFi" scheme="https://tonycode.top/tags/WiFi/"/>
+    
+      <category term="Blinker" scheme="https://tonycode.top/tags/Blinker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Arduino提高篇18—MPU6050数据3D展示</title>
     <link href="https://tonycode.top/posts/cf38.html"/>
     <id>https://tonycode.top/posts/cf38.html</id>
     <published>2020-03-17T09:39:47.000Z</published>
-    <updated>2020-04-02T08:42:53.174Z</updated>
+    <updated>2020-04-02T09:40:21.137Z</updated>
     
     <summary type="html">
     
@@ -574,35 +605,6 @@
       <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
     
       <category term="OLED" scheme="https://tonycode.top/tags/OLED/"/>
-    
-      <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino提高篇05—温湿度传感器DHT11</title>
-    <link href="https://tonycode.top/posts/fe24.html"/>
-    <id>https://tonycode.top/posts/fe24.html</id>
-    <published>2019-11-02T21:20:51.000Z</published>
-    <updated>2020-04-01T15:08:15.618Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
     
       <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
     
