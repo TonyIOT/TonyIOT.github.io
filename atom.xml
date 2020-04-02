@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2020-04-02T08:39:26.554Z</updated>
+  <updated>2020-04-02T08:42:26.424Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tonycode.top/posts/f8b3.html"/>
     <id>https://tonycode.top/posts/f8b3.html</id>
     <published>2020-04-01T07:22:14.000Z</published>
-    <updated>2020-04-02T08:39:26.554Z</updated>
+    <updated>2020-04-02T08:42:26.424Z</updated>
     
     <summary type="html">
     
@@ -37,6 +37,34 @@
     
     
       <category term="C/C++" scheme="https://tonycode.top/categories/C-C/"/>
+    
+    
+      <category term="编程" scheme="https://tonycode.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Processing笔记01—初识Processing</title>
+    <link href="https://tonycode.top/posts/ebb3.html"/>
+    <id>https://tonycode.top/posts/ebb3.html</id>
+    <published>2020-03-30T11:18:47.000Z</published>
+    <updated>2020-04-02T09:13:27.501Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近在使用Arduino时遇上了Processing，越了解越喜欢，不说别的优点，这东东与Arduino交互做PC机上的数据展示真的是很不错的选择。可以说这是真正一门与艺术相关的编程语言，本篇开始将分享Processing系列学习笔记，希望感兴趣的朋友一起学习。&lt;/p&gt;
+&lt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Processing" scheme="https://tonycode.top/categories/Processing/"/>
     
     
       <category term="编程" scheme="https://tonycode.top/tags/%E7%BC%96%E7%A8%8B/"/>
@@ -75,7 +103,7 @@
     <link href="https://tonycode.top/posts/cf38.html"/>
     <id>https://tonycode.top/posts/cf38.html</id>
     <published>2020-03-17T09:39:47.000Z</published>
-    <updated>2020-04-01T15:52:18.281Z</updated>
+    <updated>2020-04-02T08:42:53.174Z</updated>
     
     <summary type="html">
     
@@ -577,37 +605,6 @@
       <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
     
       <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino提高篇04—U8g2库驱动OLED</title>
-    <link href="https://tonycode.top/posts/ee7a.html"/>
-    <id>https://tonycode.top/posts/ee7a.html</id>
-    <published>2019-11-02T07:17:55.000Z</published>
-    <updated>2020-04-01T15:08:15.616Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
-    
-      <category term="OLED" scheme="https://tonycode.top/tags/OLED/"/>
-    
-      <category term="U8g2" scheme="https://tonycode.top/tags/U8g2/"/>
     
   </entry>
   
