@@ -79,6 +79,31 @@
     
     
     <entry>
+      <title>使用VSCode开发Arduino</title>
+      <link href="/posts/f947.html"/>
+      <url>/posts/f947.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200406072708.jpg" alt=""></p><p>Arduino自家的IDE环境一直很简陋，没有语法高亮，没有代码补全，不能快速查找跳转函数及变量，在开发稍微复杂一点的项目时很是痛苦。有时候需要查看库文件代码，也只能在电脑中搜索文件名去打开。</p><h4 id="为什么使用VSCode"><a href="#为什么使用VSCode" class="headerlink" title="为什么使用VSCode?"></a>为什么使用VSCode?</h4><p>VSCode是当下比较流行的编辑器，有着轻量化、跨平台、大量插件支持等特点，支持几乎所有主流的开发语言的语法高亮、智能代码补全、自定义快捷键、括号匹配和颜色区分等。VSCode上也有Arduino的插件，集成了Arduino上全部的功能，不管是编码烧录还是导入库之类的都可以在上面完成。</p><h4 id="环境搭建的步骤"><a href="#环境搭建的步骤" class="headerlink" title="环境搭建的步骤"></a>环境搭建的步骤</h4><ul><li>下载安装VSCode，<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">官方网址</a>。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200406072233.jpg" alt="VSCode"></p><ul><li>下载官方Arduino IDE，VSCode只是编辑器，需要去调用Arduino IDE完成程序编译等。<a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener">官方网址</a>。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200406072235.jpg" alt="IDE"></p><ul><li>启动VSCode，搜索Arduino插件并安装。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200406072234.jpg" alt="安装插件"></p><ul><li>进入VSCode的设置界面，你可以使用快捷键「Ctrl+,」,搜索Arduino相关设置，在Path中添加Arduino IDE的安装路径。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200406072236.jpg" alt="配置路径"></p><p>设置完成，打开个程序测试下吧。</p><h4 id="使用VSCode"><a href="#使用VSCode" class="headerlink" title="使用VSCode"></a>使用VSCode</h4><p>打开例程所在的文件夹，你也可以新建文件夹，然后新建arduino程序。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200406072239.jpg" alt="打开程序"></p><p>我们可以在窗口下方状态条处，点击设置开发板型号、COM口等，可以点击插头标志开启串口监视器。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200406072237.jpg" alt="板子型号"></p><p>点击窗口右上方图标或使用快捷键进行编译和上传操作：</p><ul><li>Ctrl+Alt+U 编译并上传</li><li>Ctrl+Alt+R 进行编译验证</li></ul><p>下面是演示动画，来试一下吧。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200406072238.gif" alt="演示"></p><hr><p>关注公众号「TonyCode」，更多精彩内容分享。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200402171314.jpg" alt="扫码关注"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Arduino </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VSCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言#define宏定义，你真的了解吗？</title>
       <link href="/posts/21f.html"/>
       <url>/posts/21f.html</url>

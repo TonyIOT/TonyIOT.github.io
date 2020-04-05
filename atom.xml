@@ -75,7 +75,7 @@
     <link href="https://tonycode.top/posts/ebb3.html"/>
     <id>https://tonycode.top/posts/ebb3.html</id>
     <published>2020-03-30T11:18:47.000Z</published>
-    <updated>2020-04-02T09:17:35.545Z</updated>
+    <updated>2020-04-05T23:29:01.506Z</updated>
     
     <summary type="html">
     
@@ -95,6 +95,33 @@
     
     
       <category term="编程" scheme="https://tonycode.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用VSCode开发Arduino</title>
+    <link href="https://tonycode.top/posts/f947.html"/>
+    <id>https://tonycode.top/posts/f947.html</id>
+    <published>2020-03-30T08:59:47.000Z</published>
+    <updated>2020-04-05T23:28:45.541Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
+    
+    
+      <category term="VSCode" scheme="https://tonycode.top/tags/VSCode/"/>
     
   </entry>
   
@@ -161,7 +188,7 @@
     <link href="https://tonycode.top/posts/cf38.html"/>
     <id>https://tonycode.top/posts/cf38.html</id>
     <published>2020-03-17T09:39:47.000Z</published>
-    <updated>2020-04-02T09:40:21.137Z</updated>
+    <updated>2020-04-05T23:28:39.842Z</updated>
     
     <summary type="html">
     
@@ -569,38 +596,6 @@
     
     
       <category term="树莓派" scheme="https://tonycode.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-      <category term="wiringPi" scheme="https://tonycode.top/tags/wiringPi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派笔记06—树莓派GPIO介绍和wiringPi库安装</title>
-    <link href="https://tonycode.top/posts/f7e3.html"/>
-    <id>https://tonycode.top/posts/f7e3.html</id>
-    <published>2019-11-09T21:53:54.000Z</published>
-    <updated>2020-04-01T12:49:33.320Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;树莓派开发板上提供了大量的GPIO引脚，它们通过40Pin的排针引出，早期版本只有26Pin。除去通用输入输出引脚、5V/3.3V电源和地引脚外，还提供了SPI、UART和IIC接口，新版本的开发板在原有基础上不断进行功能的扩展。&lt;/p&gt;
-&lt;p&gt;###1.
-        
-      
-    
-    </summary>
-    
-    
-      <category term="树莓派" scheme="https://tonycode.top/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-    
-      <category term="树莓派" scheme="https://tonycode.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-      <category term="GPIO" scheme="https://tonycode.top/tags/GPIO/"/>
     
       <category term="wiringPi" scheme="https://tonycode.top/tags/wiringPi/"/>
     
