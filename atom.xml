@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2020-04-05T15:38:25.306Z</updated>
+  <updated>2020-04-06T15:41:29.439Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Arduino提高篇20—S50卡数据读写</title>
+    <link href="https://tonycode.top/posts/3dff.html"/>
+    <id>https://tonycode.top/posts/3dff.html</id>
+    <published>2020-04-06T13:51:58.000Z</published>
+    <updated>2020-04-06T15:41:29.439Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;RC522模块不但可以读取标签中的数据，还能将数据写入标签中，本篇介绍S50卡的写卡操作。&lt;/p&gt;
+&lt;h2 id=&quot;1-S50卡介绍&quot;&gt;&lt;a href=&quot;#1-S50卡介绍&quot; class=&quot;headerlink&quot; title=&quot;1. S50卡介绍&quot;&gt;&lt;/a&gt;1.
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
+    
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Processing笔记02—第一行代码</title>
@@ -569,35 +599,6 @@
       <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
     
       <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派笔记08—Python点亮LED</title>
-    <link href="https://tonycode.top/posts/d5a.html"/>
-    <id>https://tonycode.top/posts/d5a.html</id>
-    <published>2019-11-09T21:54:08.000Z</published>
-    <updated>2020-04-01T12:38:46.570Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="树莓派" scheme="https://tonycode.top/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-    
-      <category term="树莓派" scheme="https://tonycode.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-      <category term="Python" scheme="https://tonycode.top/tags/Python/"/>
     
   </entry>
   
