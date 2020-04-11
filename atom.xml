@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2020-04-08T06:37:08.675Z</updated>
+  <updated>2020-04-11T09:07:35.007Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>月球计划—ESP8266接入小爱同学控制彩灯</title>
+    <link href="https://tonycode.top/posts/1188.html"/>
+    <id>https://tonycode.top/posts/1188.html</id>
+    <published>2020-04-11T03:07:13.000Z</published>
+    <updated>2020-04-11T09:07:35.007Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ESP8266" scheme="https://tonycode.top/categories/ESP8266/"/>
+    
+    
+      <category term="物联网" scheme="https://tonycode.top/tags/%E7%89%A9%E8%81%94%E7%BD%91/"/>
+    
+      <category term="WiFi" scheme="https://tonycode.top/tags/WiFi/"/>
+    
+      <category term="Blinker" scheme="https://tonycode.top/tags/Blinker/"/>
+    
+  </entry>
   
   <entry>
     <title>Arduino提高篇20—S50卡数据读写</title>
@@ -568,35 +599,6 @@
       <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
     
       <category term="OLED" scheme="https://tonycode.top/tags/OLED/"/>
-    
-      <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino提高篇07—超声波测距</title>
-    <link href="https://tonycode.top/posts/2659.html"/>
-    <id>https://tonycode.top/posts/2659.html</id>
-    <published>2019-11-17T06:24:50.000Z</published>
-    <updated>2020-04-01T15:08:15.624Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
     
       <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
     
