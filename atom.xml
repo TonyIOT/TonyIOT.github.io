@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2020-04-29T14:27:08.699Z</updated>
+  <updated>2020-05-06T15:17:17.442Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Processing笔记05—贪吃蛇小游戏</title>
+    <link href="https://tonycode.top/posts/edd1.html"/>
+    <id>https://tonycode.top/posts/edd1.html</id>
+    <published>2020-05-06T14:31:45.000Z</published>
+    <updated>2020-05-06T15:17:17.442Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;贪吃蛇游戏是非常经典的小游戏，大家肯定接触过，它在只能打电话发短信的诺基亚手机中是唯一的娱乐项目了。它的操作非常简单，很多编程语言都可以来实现它。我们已经学习了Processing中基本图形的绘制以及鼠标键盘的识别相应，本篇我们使用Processing来编程实现贪吃蛇小游戏
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Processing" scheme="https://tonycode.top/categories/Processing/"/>
+    
+    
+      <category term="编程" scheme="https://tonycode.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Processing笔记04—鼠标键盘识别</title>
@@ -542,37 +569,6 @@
     <id>https://tonycode.top/posts/5765.html</id>
     <published>2019-12-08T03:23:24.000Z</published>
     <updated>2020-04-01T15:08:15.635Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
-    
-      <category term="OLED" scheme="https://tonycode.top/tags/OLED/"/>
-    
-      <category term="摇杆" scheme="https://tonycode.top/tags/%E6%91%87%E6%9D%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino提高篇13—摇杆控制OLED移动显示</title>
-    <link href="https://tonycode.top/posts/dd68.html"/>
-    <id>https://tonycode.top/posts/dd68.html</id>
-    <published>2019-12-01T12:32:00.000Z</published>
-    <updated>2020-04-01T15:08:15.634Z</updated>
     
     <summary type="html">
     
