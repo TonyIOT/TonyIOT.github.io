@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2020-05-25T16:29:12.818Z</updated>
+  <updated>2020-05-27T17:54:23.559Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Arduino提高篇25—手势识别</title>
+    <link href="https://tonycode.top/posts/4410.html"/>
+    <id>https://tonycode.top/posts/4410.html</id>
+    <published>2020-05-27T16:48:22.000Z</published>
+    <updated>2020-05-27T17:54:23.559Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
+    
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="OLED" scheme="https://tonycode.top/tags/OLED/"/>
+    
+      <category term="手势识别" scheme="https://tonycode.top/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Processing笔记06—Processing控制Arduino点灯</title>
     <link href="https://tonycode.top/posts/f983.html"/>
     <id>https://tonycode.top/posts/f983.html</id>
     <published>2020-05-25T15:04:51.000Z</published>
-    <updated>2020-05-25T16:29:12.818Z</updated>
+    <updated>2020-05-25T16:45:57.912Z</updated>
     
     <summary type="html">
     
@@ -562,37 +593,6 @@
       <category term="WiFi" scheme="https://tonycode.top/tags/WiFi/"/>
     
       <category term="Blinker" scheme="https://tonycode.top/tags/Blinker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino提高篇18—MPU6050数据3D展示</title>
-    <link href="https://tonycode.top/posts/cf38.html"/>
-    <id>https://tonycode.top/posts/cf38.html</id>
-    <published>2020-03-17T09:39:47.000Z</published>
-    <updated>2020-04-05T23:28:39.842Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
-    
-      <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
-    
-      <category term="Processing" scheme="https://tonycode.top/tags/Processing/"/>
     
   </entry>
   
