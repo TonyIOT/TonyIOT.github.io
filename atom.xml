@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2020-05-28T04:50:47.586Z</updated>
+  <updated>2020-06-11T15:25:27.850Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Arduino提高篇26—贪吃蛇游戏</title>
+    <link href="https://tonycode.top/posts/869c.html"/>
+    <id>https://tonycode.top/posts/869c.html</id>
+    <published>2020-06-11T14:14:10.000Z</published>
+    <updated>2020-06-11T15:25:27.850Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
+    
+    
+      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
+    
+      <category term="OLED" scheme="https://tonycode.top/tags/OLED/"/>
+    
+      <category term="摇杆" scheme="https://tonycode.top/tags/%E6%91%87%E6%9D%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Arduino提高篇25—手势识别</title>
@@ -562,37 +593,6 @@
     
     
       <category term="编程" scheme="https://tonycode.top/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小爱同学控制EP8266点灯</title>
-    <link href="https://tonycode.top/posts/1caf.html"/>
-    <id>https://tonycode.top/posts/1caf.html</id>
-    <published>2020-03-21T14:18:47.000Z</published>
-    <updated>2020-04-19T12:44:55.510Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="ESP8266" scheme="https://tonycode.top/categories/ESP8266/"/>
-    
-    
-      <category term="物联网" scheme="https://tonycode.top/tags/%E7%89%A9%E8%81%94%E7%BD%91/"/>
-    
-      <category term="WiFi" scheme="https://tonycode.top/tags/WiFi/"/>
-    
-      <category term="Blinker" scheme="https://tonycode.top/tags/Blinker/"/>
     
   </entry>
   
