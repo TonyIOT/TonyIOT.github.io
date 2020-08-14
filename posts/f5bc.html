@@ -159,8 +159,8 @@
     };
     loaded();
 })()
- </script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Tonyの博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><style type="text/css" lang="css">
+ </script><meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Tonyの博客" type="application/atom+xml">
+<style type="text/css" lang="css">
     #loading-container{
         position: fixed;
         top: 0;
@@ -559,21 +559,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-01
+                    2020-08-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    776
+                    756
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -612,10 +612,8 @@
  * 通过按键控制LED灯亮灭
  */</span>
 
-<span class="token keyword">int</span> buttonPin <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 按键的管脚定义</span>
-<span class="token keyword">int</span> ledPin <span class="token operator">=</span>  <span class="token number">9</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// LED灯管脚定义</span>
-
-<span class="token keyword">int</span> buttonState <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 存储按键状态值</span>
+<span class="token keyword">int</span> buttonPin <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// 按键的管脚定义</span>
+<span class="token keyword">int</span> ledPin <span class="token operator">=</span>  <span class="token number">9</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">// LED灯管脚定义</span>
 
 <span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">pinMode</span><span class="token punctuation">(</span>ledPin<span class="token punctuation">,</span> OUTPUT<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//设置LED管脚输出模式</span>
@@ -623,13 +621,10 @@
 <span class="token punctuation">}</span>
 
 <span class="token keyword">void</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-  buttonState <span class="token operator">=</span> <span class="token function">digitalRead</span><span class="token punctuation">(</span>buttonPin<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//读取按键返回状态值</span>
-
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>buttonState <span class="token operator">==</span> LOW<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 若按键被按下</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">digitalRead</span><span class="token punctuation">(</span>buttonPin<span class="token punctuation">)</span> <span class="token operator">==</span> LOW<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 若按键被按下</span>
     <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//等待跳过按键抖动的不稳定过程</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>buttonState <span class="token operator">==</span> LOW<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 若按键被按下</span>
-    <span class="token punctuation">{</span>  
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">digitalRead</span><span class="token punctuation">(</span>buttonPin<span class="token punctuation">)</span> <span class="token operator">==</span> LOW<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 若按键被按下</span>
+    <span class="token punctuation">{</span>      
       <span class="token function">digitalWrite</span><span class="token punctuation">(</span>ledPin<span class="token punctuation">,</span> HIGH<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 点亮LED灯</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
@@ -638,7 +633,7 @@
   <span class="token punctuation">}</span>
 
 <span class="token punctuation">}</span></code></pre>
-<h3 id="3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。"><a href="#3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。" class="headerlink" title="3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。"></a>3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401151817.jpg" alt="程序下载"></p>
+<h3 id="3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。"><a href="#3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。" class="headerlink" title="3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。"></a>3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/image/03.jpg" alt="程序下载"></p>
 <h2 id="3-实验现象"><a href="#3-实验现象" class="headerlink" title="3. 实验现象"></a>3. 实验现象</h2><p>按下按键，LED灯点亮。放开按键，LED灯熄灭。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401151831.gif" alt="实验现象"></p>
 <h2 id="4-函数介绍"><a href="#4-函数介绍" class="headerlink" title="4. 函数介绍"></a>4. 函数介绍</h2><p><strong>digitalRead()</strong></p>
