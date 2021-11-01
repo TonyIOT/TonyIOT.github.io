@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2021-09-21T07:15:52.803Z</updated>
+  <updated>2021-11-01T13:07:30.884Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ESP8266物联网开发笔记01—ESP8266开发方式知多少</title>
+    <link href="https://tonycode.top/posts/5f07.html"/>
+    <id>https://tonycode.top/posts/5f07.html</id>
+    <published>2021-10-31T11:51:35.000Z</published>
+    <updated>2021-11-01T13:07:30.884Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot; data-original=&quot;http://cdn.tonycode.top/esp8266-01-01.jpg&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ESP8266" scheme="https://tonycode.top/categories/ESP8266/"/>
+    
+    
+      <category term="ESP8266" scheme="https://tonycode.top/tags/ESP8266/"/>
+    
+  </entry>
   
   <entry>
     <title>面包板自平衡机器人</title>
@@ -568,34 +595,6 @@
     
     
       <category term="C/C++" scheme="https://tonycode.top/categories/C-C/"/>
-    
-    
-      <category term="编程" scheme="https://tonycode.top/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Processing笔记01—初识Processing</title>
-    <link href="https://tonycode.top/posts/ebb3.html"/>
-    <id>https://tonycode.top/posts/ebb3.html</id>
-    <published>2020-03-30T11:18:47.000Z</published>
-    <updated>2020-04-05T23:29:01.506Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;最近在使用Arduino时遇上了Processing，越了解越喜欢，不说别的优点，这东东与Arduino交互做PC机上的数据展示真的是很不错的选择。可以说这是真正一门与艺术相关的编程语言，本篇开始将分享Processing系列学习笔记，希望感兴趣的朋友一起学习。&lt;/p&gt;
-&lt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Processing" scheme="https://tonycode.top/categories/Processing/"/>
     
     
       <category term="编程" scheme="https://tonycode.top/tags/%E7%BC%96%E7%A8%8B/"/>
