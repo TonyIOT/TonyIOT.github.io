@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ESP8266物联网开发笔记02—ESP8266硬件介绍</title>
+      <link href="/posts/9da6.html"/>
+      <url>/posts/9da6.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-01.jpg" alt=""></p><p>在搭建好开发环境后，下一步就要选择合适的ESP8266硬件了。当下可以买到的ESP8266开发板有很多种，大多都基于ESP8266模组进行外围电路搭建，集成了串口自动下载功能，使得程序下载非常方便。</p><h2 id="1-ESP8266模组"><a href="#1-ESP8266模组" class="headerlink" title="1. ESP8266模组"></a>1. ESP8266模组</h2><p>大多数ESP8266开发板都是基于模组的，所以直接使用模组，配合串口下载模块，即可进行程序下载。常用的ESP-12模块，下载对应管脚图如下：</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-02.jpg" alt="引脚接线"></p><p>ESP8266的下载模式是通过指定引脚高低电平来配置的，下载模式和运行模式引脚配置如下：</p><table><thead><tr><th>模式</th><th>GPIO15</th><th>GPIO0</th><th>GPIO2</th></tr></thead><tbody><tr><td>UART下载模式</td><td>低</td><td>低</td><td>高</td></tr><tr><td>Flash Boot(程序运行)模式</td><td>低</td><td>高</td><td>高</td></tr></tbody></table><h2 id="2-D1-开发板"><a href="#2-D1-开发板" class="headerlink" title="2. D1 开发板"></a>2. D1 开发板</h2><p>D1 WiFi开发板在外形上兼容了Arduino UNO R3开发板，具有11个IO引脚，外形如下：</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-03.jpg" alt="D1开发板"></p><p>还有更小尺寸的Mini版本，也集成了串口自动下载电路。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-04.jpg" alt="Mini开发板"></p><h2 id="3-NodeMcu类开发板"><a href="#3-NodeMcu类开发板" class="headerlink" title="3. NodeMcu类开发板"></a>3. NodeMcu类开发板</h2><p>NodeMcu开发板是最长见的ESP8266开发板，集成了串口自动下载电路，ESP8266模组的引脚通过双列直插的排针引出，配合面包板可以很方便的搭建各种电路。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-05.jpg" alt="NodeMcu开发板"></p><p>常见的有两种，区别在于所使用的串口下载芯片有所不同，左侧窄一点的使用的是FT232芯片，右侧宽一点的使用了CH340芯片，对应安装驱动即可使用。</p><p>在使用NodeMcu开发板时，需要注意引脚定义，开发板上引脚丝印与模组GPIO管脚如下：</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-06.jpg" alt="引脚定义"></p><h2 id="4-DIY-开发板"><a href="#4-DIY-开发板" class="headerlink" title="4. DIY 开发板"></a>4. DIY 开发板</h2><p>在了解了各种开发板的特点后，可以根据需要自己DIY。对于ESP8266的学习而言，一块NodeMcu外加面包板配件足够了，就像笔者之前的Arduino相关教程中那样灵活的搭建电路，完成设计。</p><p>而这次，笔者DIY了一块开发板，基于ESP8266-12模组，支持串口自动下载，搭载了一些必要的外设模块，如OLED显示屏、DHT11温湿度、继电器、电机、RGB灯、光敏等。</p><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-07.jpg" alt="IOT Kit"></p><p>模组的引脚通过排针引出，为了更加灵活，板载外设控制引脚与模组引脚通过跳线帽短接，也可自行组合。后续会以此作为硬件平台，学习ESP8266物联网相关的知识。</p><p>搭建好软件环境，准备好硬件开发板，之后就可以开始ESP8266学习了。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ESP8266 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ESP8266 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ESP8266物联网开发笔记02—Arduino IDE搭建ESP8266开发环境</title>
       <link href="/posts/72f3.html"/>
       <url>/posts/72f3.html</url>

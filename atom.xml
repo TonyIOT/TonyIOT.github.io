@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2021-11-14T06:53:31.127Z</updated>
+  <updated>2021-11-14T11:22:58.647Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ESP8266物联网开发笔记02—ESP8266硬件介绍</title>
+    <link href="https://tonycode.top/posts/9da6.html"/>
+    <id>https://tonycode.top/posts/9da6.html</id>
+    <published>2021-11-14T08:28:09.000Z</published>
+    <updated>2021-11-14T11:22:58.647Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot; data-original=&quot;http://cdn.tonycode.top/esp8266-03-01.jpg&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ESP8266" scheme="https://tonycode.top/categories/ESP8266/"/>
+    
+    
+      <category term="ESP8266" scheme="https://tonycode.top/tags/ESP8266/"/>
+    
+  </entry>
   
   <entry>
     <title>ESP8266物联网开发笔记02—Arduino IDE搭建ESP8266开发环境</title>
@@ -569,35 +596,6 @@
     
     
       <category term="编程" scheme="https://tonycode.top/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino提高篇19—RFID模块的使用</title>
-    <link href="https://tonycode.top/posts/3a7b.html"/>
-    <id>https://tonycode.top/posts/3a7b.html</id>
-    <published>2020-04-05T10:37:52.000Z</published>
-    <updated>2020-04-11T09:11:13.292Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
-    
-      <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
     
   </entry>
   
