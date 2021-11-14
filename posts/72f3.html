@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="树莓派笔记01—35美元的Linux超级计算机, C,C++,嵌入式,Arduino,STM32等">
+    <meta name="keywords" content="ESP8266物联网开发笔记02—Arduino IDE搭建ESP8266开发环境, C,C++,嵌入式,Arduino,STM32等">
     <meta name="description" content="专注嵌入式,分享知识,分享生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>树莓派笔记01—35美元的Linux超级计算机 | Tonyの博客</title>
+    <title>ESP8266物联网开发笔记02—Arduino IDE搭建ESP8266开发环境 | Tonyの博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -492,12 +492,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401193726.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://cdn.tonycode.top/esp8266-02-01.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">树莓派笔记01—35美元的Linux超级计算机</h1>
+                    <h1 class="description center-align post-title">ESP8266物联网开发笔记02—Arduino IDE搭建ESP8266开发环境</h1>
                 </div>
             </div>
         </div>
@@ -519,8 +519,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">
-                                <span class="chip bg-color">树莓派</span>
+                            <a href="/tags/ESP8266/">
+                                <span class="chip bg-color">ESP8266</span>
                             </a>
                         
                     </div>
@@ -531,8 +531,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="post-category">
-                                树莓派
+                            <a href="/categories/ESP8266/" class="post-category">
+                                ESP8266
                             </a>
                         
                     </div>
@@ -544,28 +544,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-08-02
+                    2021-11-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-01
+                    2021-11-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    782
+                    383
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -581,60 +581,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401193726.jpg" alt=""></p>
-<p>普及编程，服务大众是树莓派的一个理想，它打造了一个廉价、简洁、好玩、高效并能充分发挥创造力的开发平台，它的售价只有35美元，这大概是性价比最高的Linux计算机了吧。发挥你的想象，创作你的创作，人人都应该拥有一台树莓派。</p>
-<h2 id="什么是树莓派（Raspberry-Pi）"><a href="#什么是树莓派（Raspberry-Pi）" class="headerlink" title="什么是树莓派（Raspberry Pi）"></a>什么是树莓派（Raspberry Pi）</h2><p>Raspberry Pi(中文名为「树莓派」,简写为 RPi/RasPi)是一种只有信用卡大小的卡片式电脑，其系统基于 Linux。</p>
-<p>树莓派由注册于英国的慈善组织「Raspberry Pi 基金会」研发，最初的设计目标是用较为廉价的硬件和开源软件为儿童提供一个计算机教育平台。但其优秀的扩展性和易于开发的特性，使其不仅仅用于儿童教育，更是成为了极客们的玩具。树莓派被开发出了千千万万种玩法，并且普通人也可以轻松实现。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401193728.jpg" alt="目前最新版本：3B+"></p>
-<h2 id="树莓派能做什么"><a href="#树莓派能做什么" class="headerlink" title="树莓派能做什么"></a>树莓派能做什么</h2><p>你可以在树莓派上安装摄像头、氢气球和传感器让它上天，去探索宇宙。你可以搭建私人气象站，智能家居控制中心又或者是做成摄像监控系统。</p>
-<p>如果你只是想用于学习，那么接上显示器和键鼠就是一台 Linux 电脑了。你可以运行所有Linux下的程序，你可以用来运行你的Python、你的Shell，来学习Linux系统编程，无需虚拟机。</p>
-<p>你也可以选择连接WiFi丢在墙角当作一台服务器，可以部署你的博客、你的网站、你的私有云。还有那些游戏机、机器人、3D打印机更是不在话下。除了不能拿来吃，它能干的还有很多很多。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401193730.jpg" alt="网友的灵感"></p>
-<h2 id="树莓派种类"><a href="#树莓派种类" class="headerlink" title="树莓派种类"></a>树莓派种类</h2><p>树莓派是全球范围内销售量最大的 mini 单板机电脑，其前后发布版本如下表所示：</p>
-<table>
-<thead>
-<tr>
-<th>发布时间</th>
-<th align="center">版本型号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2011-12</td>
-<td align="center">Raspberry Pi Model B</td>
-</tr>
-<tr>
-<td>2014-07</td>
-<td align="center">Raspberry Pi Model B+</td>
-</tr>
-<tr>
-<td>2014-11</td>
-<td align="center">Raspberry Pi Model A+</td>
-</tr>
-<tr>
-<td>2015-02</td>
-<td align="center">Raspberry Pi 2 Model B</td>
-</tr>
-<tr>
-<td>2015-11</td>
-<td align="center">Raspberry Pi Zero</td>
-</tr>
-<tr>
-<td>2016-02</td>
-<td align="center">Raspberry Pi 3 Model B</td>
-</tr>
-<tr>
-<td>2017-02</td>
-<td align="center">Raspberry Pi Zero W</td>
-</tr>
-<tr>
-<td>2018-03</td>
-<td align="center">Raspberry Pi 3 Model B+</td>
-</tr>
-</tbody></table>
-<p>树莓派在硬件性能上不断提升，价格依然保持不变，绝对良心的加量不加价，而且软件硬件兼容性很好，这使得你在3B上开发的程序完全可以在Zero上运行而不需要过多的修改。</p>
-<p>一张树莓派的全家福，你拥有多少呢？</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401193724.jpg" alt="树莓派全家福"></p>
-<p>普及编程，服务大众。开源的力量，不是说我们可以免费享用他人的成果，而是说集合全世界的力量。这种力量也是推动树莓派兴起的重要原因。开源，将DIY（Do it yourself）变成了DIT（Do it together），使得树莓派有着无限可能。</p>
+                <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-02-01.jpg" alt=""></p>
+<p>在ESP8266的众多开发方式中，Arduino开发方式深受玩家喜爱，强大的Arduino生态为ESP8266的开发提供了便利。工欲善其事，必先利其器，本篇介绍Arduino IDE搭建ESP8266开发环境。</p>
+<h2 id="1-Arduino-IDE安装"><a href="#1-Arduino-IDE安装" class="headerlink" title="1. Arduino IDE安装"></a>1. Arduino IDE安装</h2><p>从arduino<a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener">官网</a>提供了不同平台的Arduino IDE安装包，当前最新版本1.8.16，对应自己的电脑系统进行下载即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-02-02.jpg" alt="Arduino IDE"></p>
+<p>下载后，双击可执行文件，按照安装步骤安装好Arduino IDE。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-02-05.jpg" alt="启动IDE"></p>
+<h2 id="2-安装ESP8266支持"><a href="#2-安装ESP8266支持" class="headerlink" title="2. 安装ESP8266支持"></a>2. 安装ESP8266支持</h2><p>点击文件—首选项，打开首选项对话框，在“附加到开发板管理网址”中，输入以下网址：</p>
+<pre class=" language-html"><code class="language-html">http://arduino.esp8266.com/stable/package_esp8266com_index.json</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-02-03.jpg" alt="设置首选项"></p>
+<p>重启IDE，点击工具—开发板—开发板管理器，在搜索栏中输入“esp8266”，找到ESP8266插件。在下拉选项中选择最新版本进行安装，安装过程受网络环境影响。若反复安装失败，可百度相关的一键安装文件。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-02-04.jpg" alt="安装插件"></p>
+<h2 id="3-选择ESP8266开发板"><a href="#3-选择ESP8266开发板" class="headerlink" title="3. 选择ESP8266开发板"></a>3. 选择ESP8266开发板</h2><p>ESP8266插件安装完成后，点击工具—开发板，可以看到在Arduino AVR Boards外，新增加了ESP8266 Boards，里面包含了众多ESP8266开发板支持。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-02-06.jpg" alt="Esp8266 Boards"></p>
+<p>至此，ESP8266的Arduino开发环境就安装完成了，后续就可以连接开发板编写程序使用ESP8266了。</p>
+<hr>
+<p>关注公众号「TonyCode」。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200402171314.jpg" alt="扫码关注"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -678,7 +641,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tonycode.top/posts/f02c.html">https://tonycode.top/posts/f02c.html</a>
+                    <a href="https://tonycode.top/posts/72f3.html">https://tonycode.top/posts/72f3.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -716,8 +679,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">
-                                    <span class="chip bg-color">树莓派</span>
+                                <a href="/tags/ESP8266/">
+                                    <span class="chip bg-color">ESP8266</span>
                                 </a>
                             
                         </div>
@@ -780,45 +743,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/58fa.html">
+                <a href="/posts/72f3.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401194808.jpg" class="responsive-img" alt="树莓派笔记02—树莓派硬件环境准备">
+                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-02-01.jpg" class="responsive-img" alt="ESP8266物联网开发笔记02—Arduino IDE搭建ESP8266开发环境">
                         
-                        <span class="card-title">树莓派笔记02—树莓派硬件环境准备</span>
+                        <span class="card-title">ESP8266物联网开发笔记02—Arduino IDE搭建ESP8266开发环境</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            树莓派硬件环境
+                            搭建ESP8266开发环境
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2018-08-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="post-category">
-                                    树莓派
+                            <a href="/categories/ESP8266/" class="post-category">
+                                    ESP8266
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">
-                        <span class="chip bg-color">树莓派</span>
+                    <a href="/tags/ESP8266/">
+                        <span class="chip bg-color">ESP8266</span>
                     </a>
                     
                 </div>
@@ -832,30 +797,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/6a8f.html">
+                <a href="/posts/5f07.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401150812.jpg" class="responsive-img" alt="Arduino基础入门篇06——流动的LED灯">
+                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-01-01.jpg" class="responsive-img" alt="ESP8266物联网开发笔记01—ESP8266开发方式知多少">
                         
-                        <span class="card-title">Arduino基础入门篇06——流动的LED灯</span>
+                        <span class="card-title">ESP8266物联网开发笔记01—ESP8266开发方式知多少</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            流水灯
+                            选择适合自己的方式玩转ESP8266
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-08-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-31
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Arduino/" class="post-category">
-                                    Arduino
+                            <a href="/categories/ESP8266/" class="post-category">
+                                    ESP8266
                                 </a>
                             
                             
@@ -865,16 +830,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Uno/">
-                        <span class="chip bg-color">Uno</span>
-                    </a>
-                    
-                    <a href="/tags/Arduino/">
-                        <span class="chip bg-color">Arduino</span>
-                    </a>
-                    
-                    <a href="/tags/Led/">
-                        <span class="chip bg-color">Led</span>
+                    <a href="/tags/ESP8266/">
+                        <span class="chip bg-color">ESP8266</span>
                     </a>
                     
                 </div>
