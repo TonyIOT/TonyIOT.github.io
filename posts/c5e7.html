@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Arduino基础入门篇23—串口通讯, C,C++,嵌入式,Arduino,STM32等">
+    <meta name="keywords" content="ESP8266物联网开发笔记03—ESP8266程序下载, C,C++,嵌入式,Arduino,STM32等">
     <meta name="description" content="专注嵌入式,分享知识,分享生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Arduino基础入门篇23—串口通讯 | Tonyの博客</title>
+    <title>ESP8266物联网开发笔记03—ESP8266程序下载 | Tonyの博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -492,12 +492,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401165119.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://cdn.tonycode.top/esp8266-03-01.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Arduino基础入门篇23—串口通讯</h1>
+                    <h1 class="description center-align post-title">ESP8266物联网开发笔记03—ESP8266程序下载</h1>
                 </div>
             </div>
         </div>
@@ -519,12 +519,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Uno/">
-                                <span class="chip bg-color">Uno</span>
-                            </a>
-                        
-                            <a href="/tags/%E4%B8%B2%E5%8F%A3/">
-                                <span class="chip bg-color">串口</span>
+                            <a href="/tags/ESP8266/">
+                                <span class="chip bg-color">ESP8266</span>
                             </a>
                         
                     </div>
@@ -535,8 +531,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Arduino/" class="post-category">
-                                Arduino
+                            <a href="/categories/ESP8266/" class="post-category">
+                                ESP8266
                             </a>
                         
                     </div>
@@ -548,28 +544,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-09-25
+                    2021-11-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-01
+                    2021-11-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    986
+                    707
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -585,137 +581,50 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401165119.jpg" alt=""></p>
-<p>在很多时候，Arduino需要和其他设备相互通讯，而最常见最简单的方式就是串口通讯。本篇介绍Arduino硬件串口通讯，了解相关函数的使用。</p>
-<h2 id="1-硬件串口"><a href="#1-硬件串口" class="headerlink" title="1. 硬件串口"></a>1. 硬件串口</h2><p>在PC机上最常见的串行通讯协议是RS-232串行协议，而各种微控制器(单片机)上采用的是TTL串行协议，两者电平不同，需要经过相应电平转换才能进行相互通讯。</p>
-<p>Arduino Uno R3开发板上，硬件串口位于Rx(0)和Tx(1)引脚上，Arduino的USB口通过转换芯片与这两个引脚连接。该转换芯片会通过USB接口在PC机上虚拟出一个用于Arduino通讯的串口，我们下载程序也是通过串口进行的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401165122.jpg" alt="硬件串口接口"></p>
-<h2 id="2-相关函数介绍"><a href="#2-相关函数介绍" class="headerlink" title="2. 相关函数介绍"></a>2. 相关函数介绍</h2><p>Arduino提供的串口通讯函数非常丰富，详细介绍参考<a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/" target="_blank" rel="noopener">Arduino官网串口使用指南</a>。</p>
-<p><strong>Serial.begin()</strong></p>
-<ul>
-<li>描述：开启串口，通常置于setup()函数中。</li>
-<li>原型：<ul>
-<li><strong>Serial.begin(speed)</strong></li>
-<li><strong>Serial.begin(speed, config)</strong></li>
-</ul>
-</li>
-<li>参数：<ul>
-<li>speed：波特率，一般取值9600,115200等。</li>
-<li>config：设置数据位、校验位和停止位。默认SERIAL_8N1表示8个数据位，无校验位，1个停止位。</li>
-</ul>
-</li>
-<li>返回值：无。</li>
-</ul>
-<p><strong>Serial.end()</strong></p>
-<ul>
-<li>描述：禁止串口传输。此时串口Rx和Tx可以作为数字IO引脚使用。</li>
-<li>原型：<strong>Serial.end()</strong></li>
-<li>参数：无。</li>
-<li>返回值：无。</li>
-</ul>
-<p><strong>Serial.print()</strong></p>
-<ul>
-<li>描述：串口输出数据，写入字符数据到串口。</li>
-<li>原型：<ul>
-<li><strong>Serial.print(val)</strong></li>
-<li><strong>Serial.print(val, format)</strong></li>
-</ul>
-</li>
-<li>参数：<ul>
-<li>val：打印的值，任意数据类型。</li>
-<li>config：输出的数据格式。BIN(二进制)、OCT(八进制)、DEC(十进制)、HEX(十六进制)。对于浮点数，此参数指定要使用的小数位数。</li>
-</ul>
-</li>
-<li>示例：<ul>
-<li>Serial.print(78, BIN) 得到 “1001110”</li>
-<li>Serial.print(78, OCT) 得到 “116”</li>
-<li>Serial.print(78, DEC) 得到 “78”</li>
-<li>Serial.print(78, HEX) 得到 “4E”</li>
-<li>Serial.print(1.23456, 0) 得到 “1”</li>
-<li>Serial.print(1.23456, 2) 得到 “1.23”</li>
-<li>Serial.print(1.23456, 4) 得到 “1.2346”</li>
-<li>Serial.print(‘N’) 得到 “N”</li>
-<li>Serial.print(“Hello world.”) 得到 “Hello world.”</li>
-</ul>
-</li>
-<li>返回值：返回写入的字节数。</li>
-</ul>
-<p><strong>Serial.println()</strong></p>
-<ul>
-<li>描述：串口输出数据并换行。</li>
-<li>原型：<ul>
-<li><strong>Serial.println(val)</strong></li>
-<li><strong>Serial.println(val, format)</strong></li>
-</ul>
-</li>
-<li>参数：<ul>
-<li>val：打印的值，任意数据类型。</li>
-<li>config：输出的数据格式。</li>
-</ul>
-</li>
-<li>返回值：返回写入的字节数。</li>
-</ul>
-<p><strong>Serial.available()</strong></p>
-<ul>
-<li>描述：判断串口缓冲区的状态，返回从串口缓冲区读取的字节数。</li>
-<li>原型：<strong>Serial.available()</strong></li>
-<li>参数：无。</li>
-<li>返回值：可读取的字节数。</li>
-</ul>
-<p><strong>Serial.read()</strong></p>
-<ul>
-<li>描述：读取串口数据，一次读一个字符，读完后删除已读数据。</li>
-<li>原型：<strong>Serial.read()</strong></li>
-<li>参数：无。</li>
-<li>返回值：返回串口缓存中第一个可读字节，当没有可读数据时返回-1，整数类型。</li>
-</ul>
-<p><strong>Serial.readBytes()</strong></p>
-<ul>
-<li>描述：从串口读取指定长度的字符到缓存数组。</li>
-<li>原型：<strong>Serial.readBytes(buffer, length)</strong></li>
-<li>参数：<ul>
-<li>buffer：缓存变量。</li>
-<li>length：设定的读取长度。</li>
-</ul>
-</li>
-<li>返回值：返回存入缓存的字符数。</li>
-</ul>
-<h2 id="3-实验步骤"><a href="#3-实验步骤" class="headerlink" title="3. 实验步骤"></a>3. 实验步骤</h2><h3 id="1-通过数据线连接开发板到PC机。"><a href="#1-通过数据线连接开发板到PC机。" class="headerlink" title="1. 通过数据线连接开发板到PC机。"></a>1. 通过数据线连接开发板到PC机。</h3><h3 id="2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"><a href="#2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。" class="headerlink" title="2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"></a>2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。</h3><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
-   Serial
-   串口通讯实验
-*/</span>
-<span class="token keyword">int</span> incomedate <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-01.jpg" alt=""></p>
+<p>在搭建好开发环境，准备好ESP8266硬件后，我们就可以开始编写下载程序了。本片介绍ESP8266程序下载，通过ESP8266特殊API打印输出模块基本信息。</p>
+<h2 id="1-安装驱动"><a href="#1-安装驱动" class="headerlink" title="1. 安装驱动"></a>1. 安装驱动</h2><p>通过数据线将ESP8266开发板连接到电脑，打开设备管理器，在端口中查看端口号。下图中电脑同时连接了NodeMcu开发板和IOT Kit开发板，它们的驱动芯片分别为CP2102和CH340，对应端口号为COM6和COM31。端口号不同的电脑显示不尽相同，以实际为准。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-04-01.jpg" alt="查看端口号"></p>
+<p>如果你的电脑之前没有安装过这两款芯片的驱动程序，则端口无法识别，需要安装对应的驱动程序。百度对应芯片下载驱动，然后按照步骤安装即可，这里不做详细介绍，笔者已将驱动打包下载，文末可获取链接。</p>
+<h2 id="2-点灯程序下载"><a href="#2-点灯程序下载" class="headerlink" title="2. 点灯程序下载"></a>2. 点灯程序下载</h2><p>启动Arduino IDE，点击工具—开发板—ESP8266 Boards，选择NodeMCU1.0。端口号选择电脑设备浏览器中识别的端口号。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-04-02.jpg" alt="开发板类型"></p>
+<p>点击文件—示例—ESP8266—Blink，打开闪灯示例程序。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-04-03.jpg" alt="Blink示例"></p>
+<p>点击编辑上传，消息栏将显示相关编译上传信息，上传成功后，按板载复位键，ESP8266模块自带的LED灯按照程序延时时间亮灭。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-04-04.jpg" alt="程序下载"></p>
+<h2 id="3-ESP8266特殊API介绍"><a href="#3-ESP8266特殊API介绍" class="headerlink" title="3. ESP8266特殊API介绍"></a>3. ESP8266特殊API介绍</h2><p>在IDE中点击文件—新建，拷贝如下代码保存。</p>
+<pre class=" language-c++"><code class="language-c++">/*
+ * Demo01
+ * 打印ESP8266模块信息
+ */
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  Serial.println("------------------");
+  Serial.printf("The Chip ID:0x%X\r\n", ESP.getChipId()); //获取芯片ID
+  Serial.printf("The Core Version:%s\r\n", ESP.getCoreVersion());//获取核心库版本
+  Serial.printf("The SDK Version:%s\r\n", ESP.getSdkVersion());//获取SDK版本
+  Serial.printf("The CPU Freq:%d MHz\r\n", ESP.getCpuFreqMHz());//获取CPU运行频率
+  Serial.println("------------------");
+  Serial.printf("The Flash Chip ID:0x%X\r\n", ESP.getFlashChipId());//获取闪存ID
+  Serial.printf("The Flash Real Size:%d KBytes\r\n", ESP.getFlashChipRealSize()/1024);//获取闪存容量
+  Serial.printf("The Flash Chip Speed:%d MHz\r\n", ESP.getFlashChipSpeed()/1000000);//获取闪存芯片运行频率
 
-  Serial<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token number">9600</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//设置串口波特率9600</span>
+}
 
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">78</span><span class="token punctuation">,</span> BIN<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// "1001110"</span>
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">78</span><span class="token punctuation">,</span> OCT<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// "116"</span>
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">78</span><span class="token punctuation">,</span> DEC<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// "78"</span>
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">78</span><span class="token punctuation">,</span> HEX<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// "4E"</span>
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">1.23456</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// "1"</span>
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">1.23456</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// "1.23"</span>
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">1.23456</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// "1.2346"</span>
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">'N'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// "N"</span>
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello world."</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// "Hello world."</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>Serial<span class="token punctuation">.</span><span class="token function">available</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//串口接收到数据</span>
-  <span class="token punctuation">{</span>
-    incomedate <span class="token operator">=</span> Serial<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获取串口接收到的数据</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>incomedate <span class="token operator">==</span> <span class="token string">'H'</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-      Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Good Job!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span></code></pre>
-<h3 id="3-设置好对应端口号和开发板类型进行程序下载。"><a href="#3-设置好对应端口号和开发板类型进行程序下载。" class="headerlink" title="3. 设置好对应端口号和开发板类型进行程序下载。"></a>3. 设置好对应端口号和开发板类型进行程序下载。</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401165120.jpg" alt="程序下载"></p>
-<h3 id="4-打开串口监视器，设置波特率9600，观察串口打印信息。输入”H”，串口返回”Good-Job-”。"><a href="#4-打开串口监视器，设置波特率9600，观察串口打印信息。输入”H”，串口返回”Good-Job-”。" class="headerlink" title="4. 打开串口监视器，设置波特率9600，观察串口打印信息。输入”H”，串口返回”Good Job!”。"></a>4. 打开串口监视器，设置波特率9600，观察串口打印信息。输入”H”，串口返回”Good Job!”。</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401165121.jpg" alt="实验现象"></p>
+void loop() {
+  // put your main code here, to run repeatedly:
+}</code></pre>
+<p>点击上传，程序编译上传成功后，打开串口监视器，波特率设置115200，按板载复位按键进行硬件复位，可看到串口监视器打印相关信息。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-04-05.jpg" alt="模块信息"></p>
+<p>ESP8266提供了一些特殊的API，可以获取模块相关信息，<a href="https://arduino-esp8266.readthedocs.io/en/latest/libraries.html#esp-specific-apis" target="_blank" rel="noopener">官方文档</a>给出了相关说明。这里简要列举几个：</p>
+<ul>
+<li>ESP.getChipId()：获取ESP8266 ID</li>
+<li>ESP.getCoreVersion()：获取核心库版本</li>
+<li>ESP.getCpuFreqMHz()：获取CPU运行频率</li>
+<li>ESP.getFlashChipRealSize()：获取闪存容量</li>
+<li>ESP.getFlashChipSpeed()：获取闪存运行频率</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -759,7 +668,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tonycode.top/posts/a4f2.html">https://tonycode.top/posts/a4f2.html</a>
+                    <a href="https://tonycode.top/posts/c5e7.html">https://tonycode.top/posts/c5e7.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -797,12 +706,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Uno/">
-                                    <span class="chip bg-color">Uno</span>
-                                </a>
-                            
-                                <a href="/tags/%E4%B8%B2%E5%8F%A3/">
-                                    <span class="chip bg-color">串口</span>
+                                <a href="/tags/ESP8266/">
+                                    <span class="chip bg-color">ESP8266</span>
                                 </a>
                             
                         </div>
@@ -865,49 +770,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/1486.html">
+                <a href="/posts/c5e7.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401170920.jpg" class="responsive-img" alt="Arduino基础入门篇24—继电器控制">
+                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-01.jpg" class="responsive-img" alt="ESP8266物联网开发笔记03—ESP8266程序下载">
                         
-                        <span class="card-title">Arduino基础入门篇24—继电器控制</span>
+                        <span class="card-title">ESP8266物联网开发笔记03—ESP8266程序下载</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本篇介绍继电器的使用，通过串口发送命令来控制继电器动作。
+                            程序下载，获取ESP8266信息
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2018-09-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Arduino/" class="post-category">
-                                    Arduino
+                            <a href="/categories/ESP8266/" class="post-category">
+                                    ESP8266
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Uno/">
-                        <span class="chip bg-color">Uno</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%BB%A7%E7%94%B5%E5%99%A8/">
-                        <span class="chip bg-color">继电器</span>
+                    <a href="/tags/ESP8266/">
+                        <span class="chip bg-color">ESP8266</span>
                     </a>
                     
                 </div>
@@ -921,30 +824,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/d2dd.html">
+                <a href="/posts/9da6.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401164507.jpg" class="responsive-img" alt="Arduino基础入门篇22—74HC595扩展IO">
+                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-01.jpg" class="responsive-img" alt="ESP8266物联网开发笔记03—ESP8266硬件介绍">
                         
-                        <span class="card-title">Arduino基础入门篇22—74HC595扩展IO</span>
+                        <span class="card-title">ESP8266物联网开发笔记03—ESP8266硬件介绍</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本篇介绍74HC595芯片，使用它来扩展Arduino的IO口。
+                            了解下ESP8266开发板
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Arduino/" class="post-category">
-                                    Arduino
+                            <a href="/categories/ESP8266/" class="post-category">
+                                    ESP8266
                                 </a>
                             
                             
@@ -954,12 +857,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Uno/">
-                        <span class="chip bg-color">Uno</span>
-                    </a>
-                    
-                    <a href="/tags/Led/">
-                        <span class="chip bg-color">Led</span>
+                    <a href="/tags/ESP8266/">
+                        <span class="chip bg-color">ESP8266</span>
                     </a>
                     
                 </div>
