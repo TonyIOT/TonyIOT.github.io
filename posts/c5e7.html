@@ -159,8 +159,8 @@
     };
     loaded();
 })()
- </script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Tonyの博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><style type="text/css" lang="css">
+ </script><meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Tonyの博客" type="application/atom+xml">
+<style type="text/css" lang="css">
     #loading-container{
         position: fixed;
         top: 0;
@@ -551,14 +551,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-17
+                    2021-11-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    810
+                    794
                 </div>
                 
 
@@ -583,17 +583,17 @@
             <div id="articleContent">
                 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-01.jpg" alt=""></p>
 <p>在搭建好开发环境，准备好ESP8266硬件后，我们就可以开始编写下载程序了。本片介绍ESP8266程序下载，通过ESP8266特殊API打印输出模块基本信息。</p>
-<h2 id="1-安装驱动"><a href="#1-安装驱动" class="headerlink" title="1. 安装驱动"></a>1. 安装驱动</h2><p>通过数据线将ESP8266开发板连接到电脑，打开设备管理器，在端口中查看端口号。下图中电脑同时连接了NodeMcu开发板和IOT Kit开发板，它们的驱动芯片分别为CP2102和CH340，对应端口号为COM6和COM31。端口号不同的电脑显示不尽相同，以实际为准。</p>
+<h2 id="1-安装驱动"><a href="#1-安装驱动" class="headerlink" title="1. 安装驱动"></a>1. 安装驱动</h2><p>通过数据线将ESP8266开发板连接到电脑，打开设备管理器，在端口中查看端口号。下图中电脑同时连接了NodeMCU开发板和IOT Kit开发板，它们的驱动芯片分别为CP2102和CH340，对应端口号为COM6和COM31。不同电脑显示端口号不尽相同，以实际为准。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-04-01.jpg" alt="查看端口号"></p>
-<p>如果你的电脑之前没有安装过这两款芯片的驱动程序，则端口无法识别，需要安装对应的驱动程序。百度对应芯片下载驱动，然后按照步骤安装即可，这里不做详细介绍，笔者已将驱动打包下载，文末可获取链接。</p>
-<h2 id="2-点灯程序下载"><a href="#2-点灯程序下载" class="headerlink" title="2. 点灯程序下载"></a>2. 点灯程序下载</h2><p>启动Arduino IDE，点击工具—开发板—ESP8266 Boards，选择NodeMCU1.0。端口号选择电脑设备浏览器中识别的端口号。</p>
+<p>如果你的电脑之前没有安装过这两款芯片的驱动程序，则设备无法识别，需要安装对应的驱动程序。百度对应芯片下载驱动，然后按照步骤安装即可，这里不做详细介绍，笔者已将驱动打包下载，文末可获取链接。</p>
+<h2 id="2-程序下载"><a href="#2-程序下载" class="headerlink" title="2. 程序下载"></a>2. 程序下载</h2><p>启动Arduino IDE，点击工具—开发板—ESP8266 Boards，选择NodeMCU1.0。端口号选择电脑设备浏览器中识别的端口号。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-04-02.jpg" alt="开发板类型"></p>
-<p>选择自己开发板对应的种类，每种开发板都涉及到一些闪存相关配置，如连接模式、容量配置、波特率等等。一般情况我们设置好对应端口号，其他保持默认即可。</p>
+<p>根据自己开发板的类型，在ESP8266 Boards选择对应的种类，每种开发板都涉及到一些闪存相关配置，如连接模式、容量配置、波特率等等。一般情况我们设置好对应端口号，其他保持默认即可。</p>
 <p>点击文件—示例—ESP8266—Blink，打开闪灯示例程序。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-04-03.jpg" alt="Blink示例"></p>
-<p>点击编辑上传，消息栏将显示相关编译上传信息，上传成功后，按板载复位键，ESP8266模块自带的LED灯按照程序延时时间亮灭。</p>
+<p>点击上传，消息栏将显示相关编译上传信息，上传成功后，按板载复位键，ESP8266模块自带的LED灯按照程序延时时间亮灭。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-04-04.jpg" alt="程序下载"></p>
-<h2 id="3-ESP8266特殊API介绍"><a href="#3-ESP8266特殊API介绍" class="headerlink" title="3. ESP8266特殊API介绍"></a>3. ESP8266特殊API介绍</h2><p>在IDE中点击文件—新建，拷贝如下代码保存。</p>
+<h2 id="3-ESP8266特殊API介绍"><a href="#3-ESP8266特殊API介绍" class="headerlink" title="3. ESP8266特殊API介绍"></a>3. ESP8266特殊API介绍</h2><p>在IDE中点击文件—新建，拷贝如下代码并保存。</p>
 <pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
  * Demo01
  * 打印ESP8266模块信息
@@ -626,7 +626,7 @@
 <li>ESP.getFlashChipRealSize()：获取闪存容量</li>
 <li>ESP.getFlashChipSpeed()：获取闪存运行频率</li>
 </ul>
-<p>动手尝试下吧，还有很多示例程序，可以浏览下示例说明，然后下载看现象，然后返回查看程序。</p>
+<p>动手尝试下吧，可以学习下其他的示例程序。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
