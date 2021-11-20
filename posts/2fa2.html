@@ -558,7 +558,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    589
+                    591
                 </div>
                 
 
@@ -618,9 +618,9 @@
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-05-01.jpg" alt="程序下载"></p>
 <p>上传完成后打开串口监视器，波特率设置115200，可以看到串口打印联网信息如下：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-05-02.jpg" alt="打印信息"></p>
-<p>当成功连接网络后，ESP8266获取到的IP地址，在同一局域网下的电脑端，打开命令提示符，通过ping命令测试通讯正常。</p>
+<p>当成功连接网络后，ESP8266将获取到IP地址，在同一局域网下的电脑端，打开命令提示符，通过ping命令测试通讯正常。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-05-03.jpg" alt="网络测试"></p>
-<h2 id="2-扫描多个热点连接"><a href="#2-扫描多个热点连接" class="headerlink" title="2. 扫描多个热点连接"></a>2. 扫描多个热点连接</h2><p>在ESP8266WiFiMulti中，为我们提供了往ESP8266添加多个热点存储功能，ESP8266会在添加的多个热点中，自动搜索信号最强的那个连接，当开发板需要在多个地方使用时，可以非常方便的自动连接当前环境的热点。</p>
+<h2 id="2-扫描多个热点连接"><a href="#2-扫描多个热点连接" class="headerlink" title="2. 扫描多个热点连接"></a>2. 扫描多个热点连接</h2><p>在ESP8266WiFiMulti库中，为我们提供了往ESP8266添加多个热点存储功能，ESP8266会在添加的多个热点中，自动搜索信号最强的那个连接，当开发板需要在多个地方使用时，可以非常方便的自动连接当前环境的热点。</p>
 <pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
  * connect02
  * ESP8266在多个热点中寻找信号最强的进行连接
@@ -655,7 +655,7 @@ ESP8266WiFiMulti wifis<span class="token punctuation">;</span><span class="token
 <span class="token punctuation">}</span>
 
 <span class="token keyword">void</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
-<p>通过addAP()函数，添加需要存储的热点SSID和密码，run()函数在当前环境中搜索存储的WiFi，寻找信号最强的进行连接。</p>
+<p>通过addAP()函数，添加需要存储的热点SSID和密码，run()函数在当前环境中搜索存储的热点，寻找信号最强的进行连接。</p>
 <hr>
 <p>关注公众号「TonyCode」。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200402171314.jpg" alt="扫码关注"></p>
