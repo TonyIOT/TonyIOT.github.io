@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tonycode.top/"/>
-  <updated>2021-11-18T12:32:35.868Z</updated>
+  <updated>2021-11-20T07:38:55.165Z</updated>
   <id>https://tonycode.top/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ESP8266物联网开发笔记05—ESP8266连接网络</title>
+    <link href="https://tonycode.top/posts/2fa2.html"/>
+    <id>https://tonycode.top/posts/2fa2.html</id>
+    <published>2021-11-20T06:09:33.000Z</published>
+    <updated>2021-11-20T07:38:55.165Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif&quot; data-original=&quot;http://cdn.tonycode.top/esp8266-03-01.jpg&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ESP8266" scheme="https://tonycode.top/categories/ESP8266/"/>
+    
+    
+      <category term="ESP8266" scheme="https://tonycode.top/tags/ESP8266/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ESP8266物联网开发笔记04—ESP8266程序下载</title>
     <link href="https://tonycode.top/posts/c5e7.html"/>
     <id>https://tonycode.top/posts/c5e7.html</id>
     <published>2021-11-17T12:22:34.000Z</published>
-    <updated>2021-11-18T12:32:35.868Z</updated>
+    <updated>2021-11-20T06:16:37.906Z</updated>
     
     <summary type="html">
     
@@ -566,36 +593,6 @@
       <category term="WiFi" scheme="https://tonycode.top/tags/WiFi/"/>
     
       <category term="Blinker" scheme="https://tonycode.top/tags/Blinker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arduino提高篇20—S50卡数据读写</title>
-    <link href="https://tonycode.top/posts/3dff.html"/>
-    <id>https://tonycode.top/posts/3dff.html</id>
-    <published>2020-04-06T13:51:58.000Z</published>
-    <updated>2020-04-19T12:44:26.425Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;RC522模块不但可以读取标签中的数据，还能将数据写入标签中，本篇介绍S50卡的写卡操作。&lt;/p&gt;
-&lt;h2 id=&quot;1-S50卡介绍&quot;&gt;&lt;a href=&quot;#1-S50卡介绍&quot; class=&quot;headerlink&quot; title=&quot;1. S50卡介绍&quot;&gt;&lt;/a&gt;1.
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Arduino" scheme="https://tonycode.top/categories/Arduino/"/>
-    
-    
-      <category term="Uno" scheme="https://tonycode.top/tags/Uno/"/>
-    
-      <category term="传感器" scheme="https://tonycode.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
     
   </entry>
   
