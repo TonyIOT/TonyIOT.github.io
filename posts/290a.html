@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Arduino基础入门篇29—模拟温度传感器LM35, C,C++,嵌入式,Arduino,STM32等">
+    <meta name="keywords" content="ESP8266物联网开发笔记06—ESP8266驱动OLED屏, C,C++,嵌入式,Arduino,STM32等">
     <meta name="description" content="专注嵌入式,分享知识,分享生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Arduino基础入门篇29—模拟温度传感器LM35 | Tonyの博客</title>
+    <title>ESP8266物联网开发笔记06—ESP8266驱动OLED屏 | Tonyの博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -492,12 +492,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401173404.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://cdn.tonycode.top/ESP8266-06-07.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Arduino基础入门篇29—模拟温度传感器LM35</h1>
+                    <h1 class="description center-align post-title">ESP8266物联网开发笔记06—ESP8266驱动OLED屏</h1>
                 </div>
             </div>
         </div>
@@ -519,12 +519,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Uno/">
-                                <span class="chip bg-color">Uno</span>
-                            </a>
-                        
-                            <a href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/">
-                                <span class="chip bg-color">传感器</span>
+                            <a href="/tags/ESP8266/">
+                                <span class="chip bg-color">ESP8266</span>
                             </a>
                         
                     </div>
@@ -535,8 +531,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Arduino/" class="post-category">
-                                Arduino
+                            <a href="/categories/ESP8266/" class="post-category">
+                                ESP8266
                             </a>
                         
                     </div>
@@ -548,21 +544,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-03-31
+                    2021-11-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-01
+                    2021-11-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    527
+                    634
                 </div>
                 
 
@@ -585,53 +581,95 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401173404.jpg" alt=""></p>
-<p>温度传感器就是利用物质随温度变化特性的规律，把温度转换成可输出信号的传感器，是普遍应用的传感器之一。本篇介绍模拟温度传感器—LM35。</p>
-<h2 id="1-LM35介绍"><a href="#1-LM35介绍" class="headerlink" title="1. LM35介绍"></a>1. LM35介绍</h2><p>LM35是很常用的温度传感器元件，电路连接非常方便，只需要一个模拟接口，其输出电压为摄氏度温标。采用内部补偿，输出可以从0℃开始。工作电压4—30V，芯片自身几乎没有散热问题来影响测量。</p>
-<p>传感器输出电压与摄氏度呈线性关系，0℃时输出0V，每升高1℃，输出电压增加10mV。我们根据这一关系将电压输入转换成对应的温度值。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401173411.jpg" alt="LM35"></p>
-<p>LM35封装如下，标有型号的丝印面朝上，从左到右引脚以此为：VCC、VOUT、GND。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401173534.jpg" alt="封装引脚"></p>
-<h2 id="2-实验材料"><a href="#2-实验材料" class="headerlink" title="2. 实验材料"></a>2. 实验材料</h2><ul>
-<li>Uno R3开发板</li>
-<li>配套USB数据线</li>
-<li>面包板及配套连接线</li>
-<li>LM35</li>
-</ul>
-<h2 id="3-实验步骤"><a href="#3-实验步骤" class="headerlink" title="3. 实验步骤"></a>3. 实验步骤</h2><h3 id="1-根据原理图搭建电路图。"><a href="#1-根据原理图搭建电路图。" class="headerlink" title="1. 根据原理图搭建电路图。"></a>1. 根据原理图搭建电路图。</h3><p>线路连接非常简单，LM35的VCC、VOUT、GND分别连接到开发板的5V、A0、GND。</p>
-<p>实验原理图如下图所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401173545.jpg" alt="实验原理图"></p>
-<p>实物连接图如下图所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401173544.jpg" alt="实物连接图"></p>
-<h3 id="2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"><a href="#2-新建sketch，拷贝如下代码替换自动生成的代码并进行保存。" class="headerlink" title="2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。"></a>2. 新建sketch，拷贝如下代码替换自动生成的代码并进行保存。</h3><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
- * LM35
- * 模拟温度传感器LM35测试
+                <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-07.jpg" alt=""></p>
+<p>在进行后续的ESP8266学习前，我们先来对OLED屏进行驱动，为后续学习提供直观的信息显示。</p>
+<h2 id="1-安装驱动库"><a href="#1-安装驱动库" class="headerlink" title="1. 安装驱动库"></a>1. 安装驱动库</h2><p>在之前的Arduino系列教程中，也有对OLED进行驱动的示例。这里我们依然使用「Adafruit_SSD1306」驱动库。</p>
+<p>在Arduino IDE中点击「项目」—「加载库」—「管理库」，查找选择最新版本，点击安装，然后在弹出的对话框中选择Install all，安装全部的关联库。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-02.jpg" alt="安装驱动库"></p>
+<h2 id="2-硬件连接"><a href="#2-硬件连接" class="headerlink" title="2.硬件连接"></a>2.硬件连接</h2><p>这里使用IIC驱动屏，在IOT Kit开发板上，ESP8266的GPIO4和GPIO5分别通过跳线帽连接到OLED屏的SDA和SCL引脚。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-03.jpg" alt="IOT Kit连接"></p>
+<h2 id="3-编程下载"><a href="#3-编程下载" class="headerlink" title="3.编程下载"></a>3.编程下载</h2><p>在Arduino IDE中新建scketch，拷贝如下代码并保存。</p>
+<pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
+ * oled
+ * ESP8266驱动OLED屏
  */</span>
-<span class="token keyword">int</span> potPin <span class="token operator">=</span> A0<span class="token punctuation">;</span>
-<span class="token keyword">float</span> temperature <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token keyword">long</span> value <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Wire.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Adafruit_GFX.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Adafruit_SSD1306.h></span></span>
 
+Adafruit_SSD1306 <span class="token function">oled</span><span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>Wire<span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  Serial<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token number">9600</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//设置串口波特率9600</span>
+<span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  oled<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span>SSD1306_SWITCHCAPVCC<span class="token punctuation">,</span><span class="token number">0x3C</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  oled<span class="token punctuation">.</span><span class="token function">setTextColor</span><span class="token punctuation">(</span>WHITE<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//开像素点发光</span>
+  oled<span class="token punctuation">.</span><span class="token function">clearDisplay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//清屏</span>
+
+  oled<span class="token punctuation">.</span><span class="token function">setTextSize</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//设置字体大小  </span>
+  oled<span class="token punctuation">.</span><span class="token function">setCursor</span><span class="token punctuation">(</span><span class="token number">35</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置显示位置</span>
+  oled<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"-TonyCode-"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  oled<span class="token punctuation">.</span><span class="token function">setTextSize</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置字体大小  </span>
+  oled<span class="token punctuation">.</span><span class="token function">setCursor</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置显示位置</span>
+  oled<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"OLED TEST"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  oled<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 开显示</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">void</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  value <span class="token operator">=</span> <span class="token function">analogRead</span><span class="token punctuation">(</span>potPin<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//读取模拟输入</span>
+<span class="token keyword">void</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p>电脑连接开发板，在工具—开发板—端口中选择正确的端口号，点击上传，程序编译并上传。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-06.jpg" alt="程序下载"></p>
+<p>上传完成后，可以看到OLED可以显示了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-05.jpg" alt="实验现象"></p>
+<h2 id="4-显示WiFi信息"><a href="#4-显示WiFi信息" class="headerlink" title="4. 显示WiFi信息"></a>4. 显示WiFi信息</h2><p>在完成对OLED屏的驱动后，结合前篇连接网络的例程，我们就可以在OLED屏上查看连网信息了。</p>
+<p>拷贝如下程序编译上传，之前在串口显示的连网信息就可以在OLED屏上显示了。</p>
+<pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
+ * oled_infor
+ * OLED显示连网信息
+ */</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ESP8266WiFi.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Wire.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Adafruit_GFX.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Adafruit_SSD1306.h></span></span>
 
-  <span class="token comment" spellcheck="true">//电压与摄氏度转换：</span>
-  <span class="token comment" spellcheck="true">//0.00488125=5/1024，0~5V对应模拟口读数1~1024，每10毫伏对应1℃</span>
-  temperature <span class="token operator">=</span> <span class="token punctuation">(</span>value <span class="token operator">*</span> <span class="token number">0.0048828125</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> ssid     <span class="token operator">=</span> <span class="token string">"your-ssid"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//连接WIFI名(SSID)</span>
+<span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> password <span class="token operator">=</span> <span class="token string">"your-password"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//WIFI密码</span>
 
-  Serial<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Temper =  "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  Serial<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>temperature<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  Serial<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"℃"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Adafruit_SSD1306 <span class="token function">oled</span><span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>Wire<span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">}</span></code></pre>
-<h3 id="3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。"><a href="#3-连接开发板，设置好对应端口号和开发板类型，进行程序下载。" class="headerlink" title="3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。"></a>3. 连接开发板，设置好对应端口号和开发板类型，进行程序下载。</h3><p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401173539.jpg" alt="程序下载"></p>
-<h2 id="4-实验现象"><a href="#4-实验现象" class="headerlink" title="4. 实验现象"></a>4. 实验现象</h2><p>打开串口监视器，波特率设置为9600，串口会循环打印读取的温度值。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401173546.gif" alt="实验现象"></p>
+<span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  oled<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span>SSD1306_SWITCHCAPVCC<span class="token punctuation">,</span><span class="token number">0x3C</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  oled<span class="token punctuation">.</span><span class="token function">setTextColor</span><span class="token punctuation">(</span>WHITE<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//开像素点发光</span>
+  oled<span class="token punctuation">.</span><span class="token function">clearDisplay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//清屏</span>
+
+  oled<span class="token punctuation">.</span><span class="token function">setTextSize</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//设置字体大小  </span>
+  oled<span class="token punctuation">.</span><span class="token function">setCursor</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置显示位置</span>
+  oled<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"WiFi Information"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  oled<span class="token punctuation">.</span><span class="token function">setCursor</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置显示位置</span>
+
+  WiFi<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span>ssid<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//启动网络连接</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>WiFi<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> WL_CONNECTED<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//检测网络是否连接成功</span>
+  <span class="token punctuation">{</span>
+    <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    oled<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置显示位置</span>
+    oled<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 开显示</span>
+  <span class="token punctuation">}</span>
+
+  oled<span class="token punctuation">.</span><span class="token function">setTextSize</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置字体大小  </span>
+  oled<span class="token punctuation">.</span><span class="token function">setCursor</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置显示位置</span>
+  oled<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Connected,IP address:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  oled<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  oled<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>WiFi<span class="token punctuation">.</span><span class="token function">localIP</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  oled<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 开显示</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-07.jpg" alt="实验现象"></p>
+<hr>
+<p>关注公众号「TonyCode」。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200402171314.jpg" alt="扫码关注"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -675,7 +713,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tonycode.top/posts/d78a.html">https://tonycode.top/posts/d78a.html</a>
+                    <a href="https://tonycode.top/posts/290a.html">https://tonycode.top/posts/290a.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -713,12 +751,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Uno/">
-                                    <span class="chip bg-color">Uno</span>
-                                </a>
-                            
-                                <a href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/">
-                                    <span class="chip bg-color">传感器</span>
+                                <a href="/tags/ESP8266/">
+                                    <span class="chip bg-color">ESP8266</span>
                                 </a>
                             
                         </div>
@@ -781,49 +815,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/b30a.html">
+                <a href="/posts/290a.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/Picgo/images/20200401173914.jpg" class="responsive-img" alt="Arduino基础入门篇30—数字温度传感器DS18B20">
+                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-07.jpg" class="responsive-img" alt="ESP8266物联网开发笔记06—ESP8266驱动OLED屏">
                         
-                        <span class="card-title">Arduino基础入门篇30—数字温度传感器DS18B20</span>
+                        <span class="card-title">ESP8266物联网开发笔记06—ESP8266驱动OLED屏</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本篇介绍数字温度传感器DS18B20的使用。
+                            ESP8266驱动OLED屏
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-04-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Arduino/" class="post-category">
-                                    Arduino
+                            <a href="/categories/ESP8266/" class="post-category">
+                                    ESP8266
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Uno/">
-                        <span class="chip bg-color">Uno</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/">
-                        <span class="chip bg-color">传感器</span>
+                    <a href="/tags/ESP8266/">
+                        <span class="chip bg-color">ESP8266</span>
                     </a>
                     
                 </div>
@@ -837,31 +869,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/6205.html">
+                <a href="/posts/2fa2.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/esp8266-03-01.jpg" class="responsive-img" alt="ESP8266物联网开发笔记05—ESP8266连接网络">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/featureimages/11.jpg" class="responsive-img" alt="Tiny4412裸机按键控制LED灯">
-                        
-                        <span class="card-title">Tiny4412裸机按键控制LED灯</span>
+                        <span class="card-title">ESP8266物联网开发笔记05—ESP8266连接网络</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            裸机按键控制灯
+                            连接WiFi网络
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-03-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ARM/" class="post-category">
-                                    ARM
+                            <a href="/categories/ESP8266/" class="post-category">
+                                    ESP8266
                                 </a>
                             
                             
@@ -871,12 +902,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Tiny4412/">
-                        <span class="chip bg-color">Tiny4412</span>
-                    </a>
-                    
-                    <a href="/tags/Ubuntu/">
-                        <span class="chip bg-color">Ubuntu</span>
+                    <a href="/tags/ESP8266/">
+                        <span class="chip bg-color">ESP8266</span>
                     </a>
                     
                 </div>
