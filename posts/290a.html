@@ -159,8 +159,8 @@
     };
     loaded();
 })()
- </script><meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Tonyの博客" type="application/atom+xml">
-<style type="text/css" lang="css">
+ </script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Tonyの博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><style type="text/css" lang="css">
     #loading-container{
         position: fixed;
         top: 0;
@@ -588,7 +588,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-02.jpg" alt="安装驱动库"></p>
 <h2 id="2-硬件连接"><a href="#2-硬件连接" class="headerlink" title="2.硬件连接"></a>2.硬件连接</h2><p>这里使用IIC驱动屏，在IOT Kit开发板上，ESP8266的GPIO4和GPIO5分别通过跳线帽连接到OLED屏的SDA和SCL引脚。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-03.jpg" alt="IOT Kit连接"></p>
-<h2 id="3-编程下载"><a href="#3-编程下载" class="headerlink" title="3.编程下载"></a>3.编程下载</h2><p>在Arduino IDE中新建scketch，拷贝如下代码并保存。</p>
+<h2 id="3-编程下载"><a href="#3-编程下载" class="headerlink" title="3.编程下载"></a>3.编程下载</h2><p>在Arduino IDE中新建sketch，拷贝如下代码并保存。</p>
 <pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
  * oled
  * ESP8266驱动OLED屏
@@ -617,7 +617,7 @@ Adafruit_SSD1306 <span class="token function">oled</span><span class="token punc
 <span class="token punctuation">}</span>
 
 <span class="token keyword">void</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
-<p>电脑连接开发板，在工具—开发板—端口中选择正确的端口号，点击上传，程序编译并上传。</p>
+<p>电脑连接开发板，在「工具」—「开发板」—「端口」中选择正确的端口号，点击上传，程序编译并上传。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-06.jpg" alt="程序下载"></p>
 <p>上传完成后，可以看到OLED可以显示了。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TonyIOT/cdn@1.1/medias/loading.gif" data-original="http://cdn.tonycode.top/ESP8266-06-05.jpg" alt="实验现象"></p>
